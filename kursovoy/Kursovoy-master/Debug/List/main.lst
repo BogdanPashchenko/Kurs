@@ -1,13 +1,13 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         25/Mar/2020  21:26:54
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         25/Mar/2020  21:33:13
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =  D:\Kolody\kursovoy\Kursovoy-master\main.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWBE65.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW85F3.tmp
 #        (D:\Kolody\kursovoy\Kursovoy-master\main.cpp -lC
 #        D:\Kolody\kursovoy\Kursovoy-master\Debug\List -lA
 #        D:\Kolody\kursovoy\Kursovoy-master\Debug\List -o
@@ -69,13 +69,13 @@ D:\Kolody\kursovoy\Kursovoy-master\main.cpp
       3          #include "rccregisters.hpp" // for RCC
       4          #include "GpioPort.hpp" //for SetupPort's
 
-      value|= (T::MODER::FieldValues::Alternate::Value << (pinNum * 2U)) ; //setup new znachenie
-                                      ^
+      value|= (GPIOModule::MODER::FieldValues::Alternate::Value << (pinNum * 2U)) ; //setup new znachenie
+                                               ^
 "D:\Kolody\kursovoy\Kursovoy-master\AHardware\GpioPort.hpp",12  Error[Pe276]: 
           name followed by "::" must be a class or namespace name
           detected during instantiation of "inline __interwork __vfp void
-                    GpioPort<T, pinNum>::SetAlternate() [with T=GPIOA,
-                    pinNum=5U]" at line 39 of
+                    GpioPort<GPIOModule, pinNum>::SetAlternate() [with
+                    GPIOModule=GPIOA, pinNum=5U]" at line 39 of
                     "D:\Kolody\kursovoy\Kursovoy-master\main.cpp"
       5          
       6          std::uint32_t SystemCoreClock = 16'000'000U;
