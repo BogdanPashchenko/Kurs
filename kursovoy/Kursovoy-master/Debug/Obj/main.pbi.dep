@@ -1,0 +1,93 @@
+main.pbi: D:\Kolody\kursovoy\Kursovoy-master\main.cpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper\rtos.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper/thread.hpp \
+  D:\Kolody\iarn\arm\inc\cpp\array D:\Kolody\iarn\arm\inc\cpp\algorithm \
+  D:\Kolody\iarn\arm\inc\cpp\xmemory D:\Kolody\iarn\arm\inc\cpp\xmemory0 \
+  D:\Kolody\iarn\arm\inc\cpp\cstdint D:\Kolody\iarn\arm\inc\c\stdint.h \
+  D:\Kolody\iarn\arm\inc\c\ycheck.h D:\Kolody\iarn\arm\inc\c\yvals.h \
+  D:\Kolody\iarn\arm\inc\c\DLib_Defaults.h \
+  D:\\Kolody\\iarn\\arm\\inc\\c\\DLib_Config_Normal.h \
+  D:\Kolody\iarn\arm\inc\c\DLib_Product.h \
+  D:\Kolody\iarn\arm\inc\cpp\cstdlib D:\Kolody\iarn\arm\inc\c\stdlib.h \
+  D:\Kolody\iarn\arm\inc\c\ysizet.h \
+  D:\Kolody\iarn\arm\inc\c\DLib_Product_stdlib.h \
+  D:\Kolody\iarn\arm\inc\cpp\limits D:\Kolody\iarn\arm\inc\cpp\cfloat \
+  D:\Kolody\iarn\arm\inc\c\float.h D:\Kolody\iarn\arm\inc\cpp\climits \
+  D:\Kolody\iarn\arm\inc\c\limits.h D:\Kolody\iarn\arm\inc\cpp\cmath \
+  D:\Kolody\iarn\arm\inc\c\math.h \
+  D:\Kolody\iarn\arm\inc\c\DLib_float_setup.h \
+  D:\Kolody\iarn\arm\inc\c\xtgmath.h \
+  D:\Kolody\iarn\arm\inc\cpp\xtr1common \
+  D:\Kolody\iarn\arm\inc\cpp\cwchar D:\Kolody\iarn\arm\inc\c\wchar.h \
+  D:\Kolody\iarn\arm\inc\cpp\xstddef D:\Kolody\iarn\arm\inc\cpp\cstddef \
+  D:\Kolody\iarn\arm\inc\c\stddef.h \
+  D:\Kolody\iarn\arm\inc\cpp\initializer_list \
+  D:\Kolody\iarn\arm\inc\cpp\new D:\Kolody\iarn\arm\inc\cpp\exception \
+  D:\Kolody\iarn\arm\inc\cpp\xxexception \
+  D:\Kolody\iarn\arm\inc\cpp\type_traits \
+  D:\Kolody\iarn\arm\inc\cpp\xutility D:\Kolody\iarn\arm\inc\cpp\utility \
+  D:\Kolody\iarn\arm\inc\cpp\iosfwd D:\Kolody\iarn\arm\inc\cpp\cstdio \
+  D:\Kolody\iarn\arm\inc\c\stdio.h D:\Kolody\iarn\arm\inc\cpp\cstring \
+  D:\Kolody\iarn\arm\inc\c\string.h \
+  D:\Kolody\iarn\arm\inc\c\DLib_Product_string.h \
+  D:\Kolody\iarn\arm\inc\c\xatomic.h D:\Kolody\iarn\arm\inc\cpp\iterator \
+  D:\Kolody\iarn\arm\inc\cpp\istream D:\Kolody\iarn\arm\inc\cpp\ostream \
+  D:\Kolody\iarn\arm\inc\cpp\ios D:\Kolody\iarn\arm\inc\cpp\xlocnum \
+  D:\Kolody\iarn\arm\inc\cpp\streambuf \
+  D:\Kolody\iarn\arm\inc\cpp\xiosbase D:\Kolody\iarn\arm\inc\cpp\xlocale \
+  D:\Kolody\iarn\arm\inc\cpp\clocale D:\Kolody\iarn\arm\inc\c\locale.h \
+  D:\Kolody\iarn\arm\inc\c\xctype.h \
+  D:\Kolody\iarn\arm\inc\c\xlocale_lconv.h \
+  D:\Kolody\iarn\arm\inc\cpp\cwctype D:\Kolody\iarn\arm\inc\c\wctype.h \
+  D:\Kolody\iarn\arm\inc\cpp\stdexcept \
+  D:\Kolody\iarn\arm\inc\cpp\xstring D:\Kolody\iarn\arm\inc\cpp\typeinfo \
+  D:\Kolody\iarn\arm\inc\cpp\xlocinfo D:\Kolody\iarn\arm\inc\cpp\cctype \
+  D:\Kolody\iarn\arm\inc\c\ctype.h D:\Kolody\iarn\arm\inc\cpp\ctime \
+  D:\Kolody\iarn\arm\inc\c\time.h D:\Kolody\iarn\arm\inc\c/time32.h \
+  D:\Kolody\iarn\arm\inc\cpp\system_error \
+  D:\Kolody\iarn\arm\inc\cpp\cerrno D:\Kolody\iarn\arm\inc\c\errno.h \
+  D:\Kolody\iarn\arm\inc\cpp\tuple \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos\rtosdefs.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include\FreeRtos.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/..\FreeRTOSConfig.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/projdefs.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/portable.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/deprecated_definitions.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h \
+  D:\Kolody\iarn\arm\inc\c\intrinsics.h \
+  D:\Kolody\iarn\arm\inc\c\iccarm_builtin.h \
+  D:\Kolody\iarn\arm\inc\c\iar_intrinsics_common.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/mpu_wrappers.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include\task.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/list.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include\semphr.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/queue.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include\queue.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include\timers.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/task.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include\event_groups.h \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\include/timers.h \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\Common\susudefs.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\FreeRtos\FreeRTOSConfig.h \
+  D:\Kolody\iarn\arm\inc\cpp\chrono D:\Kolody\iarn\arm\inc\cpp\ratio \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos\rtoswrapper.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper\eventmode.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper\event.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\Rtos\wrapper/eventmode.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\STM32F0x1\rccregisters.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\STM32F0x1\FieldValues\rccfieldvalues.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\fieldvalue.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers/fieldvaluebase.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers/accessmode.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers/registerfield.hpp \
+  D:\Kolody\iarn\arm\inc\cpp\cassert D:\Kolody\iarn\arm\inc\c\assert.h \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Atomic\atomicutils.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\registerbase.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers/registertype.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\register.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers/fieldvalue.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\accessmode.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\AHardware\GpioPort.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\STM32F0x1\gpioaregisters.hpp \
+  D:\Kolody\kursovoy\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\STM32F0x1\FieldValues\gpioafieldvalues.hpp
