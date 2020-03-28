@@ -2379,6 +2379,12 @@
     </group>
     <group>
         <name>Application</name>
+        <file>
+            <name>$PROJ_DIR$\Application\Button.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\ButtonTask.hpp</name>
+        </file>
     </group>
     <group>
         <name>Rtos</name>

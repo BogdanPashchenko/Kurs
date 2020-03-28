@@ -2,6 +2,10 @@
 #include "event.hpp"        // for Event
 #include "rccregisters.hpp" // for RCC
 #include "GpioPort.hpp" // for Port's
+#include "IGpio.hpp"
+#include "Button.hpp"
+#include "ButtonTask.hpp"
+#include "gpioaregisters.hpp"
 
 std::uint32_t SystemCoreClock = 16'000'000U;
 
@@ -28,18 +32,19 @@ int __low_level_init(void)
 }
 }
 
-//OsWrapper::Event event{500ms, 1}; //FIXME Чисто для примера
-
+OsWrapper::Event event{500ms, 1}; //FIXME Чисто для примера
+ButtonTask myButtonTask (event);
 //MyTask myTask(event, UserButton::GetInstance()); //FIXME Чисто для примера
 
 
 int main()
 {
-  GpioPort <GPIOA,5> GPort;
+  GpioPort<GPIOA,5> GPort;
   GPort.SetAlternate();
   using namespace OsWrapper;
+  Rtos::CreateThread(myButtonTask, "Button", ThreadPriority::normal);
   //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);   //FIXME Чисто для примера
-  //Rtos::Start();
+  Rtos::Start();
 
   return 0;
 }
