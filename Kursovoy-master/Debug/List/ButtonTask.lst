@@ -1,0 +1,453 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         01/Apr/2020  18:43:10
+# Copyright 1999-2019 IAR Systems AB.
+#
+#    Cpu mode     =  
+#    Endian       =  little
+#    Source file  =
+#        D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
+#    Command line =
+#        -f C:\Users\User\AppData\Local\Temp\EW5C7.tmp
+#        (D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp -lC
+#        D:\POIP\Kursovoy\Kursovoy-master\Debug\List -lA
+#        D:\POIP\Kursovoy\Kursovoy-master\Debug\List -o
+#        D:\POIP\Kursovoy\Kursovoy-master\Debug\Obj --no_cse --no_unroll
+#        --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling
+#        --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp
+#        --dlib_config D:\Kolody\iarn\arm\inc\c\DLib_Config_Normal.h -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\Common\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
+#        -I D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\MemMang\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\MyTasks\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Common\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\CMSIS\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Application\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\Application\Diagnostic\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\AHardware\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\AHardware\GpioPort\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\AHardware\IrqController\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Pin\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\
+#        -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Port\
+#        -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Atomic\
+#        -I D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\Singleton\ -Ol
+#        --c++ --no_exceptions --no_rtti)
+#    Locale       =  C
+#    List file    =  D:\POIP\Kursovoy\Kursovoy-master\Debug\List\ButtonTask.lst
+#    Object file  =  D:\POIP\Kursovoy\Kursovoy-master\Debug\Obj\ButtonTask.o
+#
+###############################################################################
+
+D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
+      1          #include "ButtonTask.hpp"
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp OsWrapper::TicksPerSecond std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+   \                     _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \        0x6   0x220A             MOVS     R2,#+10
+   \        0x8   0x2300             MOVS     R3,#+0
+   \        0xA   0x....'....        BL       __aeabi_ldivmod
+   \        0xE   0x9001             STR      R0,[SP, #+4]
+   \       0x10   0xA901             ADD      R1,SP,#+4
+   \       0x12   0x4668             MOV      R0,SP
+   \       0x14   0x....'....        BL       _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+   \       0x18   0x9800             LDR      R0,[SP, #+0]
+   \       0x1A   0xBD0E             POP      {R1-R3,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+   \                     _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_: (+1)
+   \        0x0   0x6809             LDR      R1,[R1, #+0]
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+   \                     _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv: (+1)
+   \        0x0   0xE9D0 0x0100      LDRD     R0,R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp uint32_t std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+   \                     _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_steady
+   \                     _ZNSt6chrono12system_clock9is_steadyE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_monotonic
+   \                     _ZNSt6chrono12system_clock12is_monotonicE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::steady_clock::is_steady
+   \                     _ZNSt6chrono12steady_clock9is_steadyE:
+   \        0x0   0x01               DC8 1
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wSleep(uint32_t)
+   \                     _ZN9OsWrapper11RtosWrapper6wSleepEj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       vTaskDelay
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+   \                     _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x000A             MOVS     R2,R1
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x9100             STR      R1,[SP, #+0]
+   \        0x8   0x466B             MOV      R3,SP
+   \        0xA   0x6801             LDR      R1,[R0, #+0]
+   \        0xC   0x4808             LDR.N    R0,??wSignalEvent_0
+   \        0xE   0x....'....        BL       xTimerPendFunctionCallFromISR
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0xD00A             BEQ.N    ??wSignalEvent_1
+   \       0x16   0x9800             LDR      R0,[SP, #+0]
+   \       0x18   0x2800             CMP      R0,#+0
+   \       0x1A   0xD007             BEQ.N    ??wSignalEvent_1
+   \       0x1C   0xF05F 0x5080      MOVS     R0,#+268435456
+   \       0x20   0x4904             LDR.N    R1,??wSignalEvent_0+0x4  ;; 0xe000ed04
+   \       0x22   0x6008             STR      R0,[R1, #+0]
+   \       0x24   0xF3BF 0x8F4F      DSB      SY
+   \       0x28   0xF3BF 0x8F6F      ISB      SY
+   \                     ??wSignalEvent_1: (+1)
+   \       0x2C   0xBD01             POP      {R0,PC}          ;; return
+   \       0x2E   0xBF00             Nop      
+   \                     ??wSignalEvent_0:
+   \       0x30   0x....'....        DC32     vEventGroupSetBitsCallback
+   \       0x34   0xE000'ED04        DC32     0xe000ed04
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::IThread::subobject IThread()
+   \                     _ZN9OsWrapper7IThreadC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper7IThreadC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::IThread::IThread()
+   \                     _ZN9OsWrapper7IThreadC1Ev: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x6541             STR      R1,[R0, #+84]
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x6581             STR      R1,[R0, #+88]
+   \        0x8   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+   \                     _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE: (+1)
+   \        0x0   0xB583             PUSH     {R0,R1,R7,LR}
+   \        0x2   0xB082             SUB      SP,SP,#+8
+   \        0x4   0xA802             ADD      R0,SP,#+8
+   \        0x6   0x....'....        BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x....'....        BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+   \       0x12   0x....'....        BL       _ZN9OsWrapper11RtosWrapper6wSleepEj
+   \       0x16   0xB005             ADD      SP,SP,#+20
+   \       0x18   0xBD00             POP      {PC}             ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::Thread<128U>::subobject Thread()
+   \                     _ZN9OsWrapper6ThreadILj128EEC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::Thread<128U>::Thread()
+   \                     _ZN9OsWrapper6ThreadILj128EEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN9OsWrapper7IThreadC2Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Event::Signal()
+   \                     _ZN9OsWrapper5Event6SignalEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x6A01             LDR      R1,[R0, #+32]
+   \        0x4   0x....'....        BL       _ZN9OsWrapper11RtosWrapper12wSignalEventERKPvj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void GpioPort<GPIOC, 13U>::SetAlternate() const
+   \                     _ZNK8GpioPortI5GPIOCLj13EE12SetAlternateEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x9800             LDR      R0,[SP, #+0]
+   \        0xA   0xF030 0x6040      BICS     R0,R0,#0xC000000
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x9800             LDR      R0,[SP, #+0]
+   \       0x12   0xF050 0x6000      ORRS     R0,R0,#0x8000000
+   \       0x16   0x9000             STR      R0,[SP, #+0]
+   \       0x18   0x9800             LDR      R0,[SP, #+0]
+   \       0x1A   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \       0x1E   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void GpioPort<GPIOC, 13U>::SetInput() const
+   \                     _ZNK8GpioPortI5GPIOCLj13EE8SetInputEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x9800             LDR      R0,[SP, #+0]
+   \        0xA   0xF030 0x6040      BICS     R0,R0,#0xC000000
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x9800             LDR      R0,[SP, #+0]
+   \       0x12   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \       0x16   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp bool GpioPort<GPIOC, 13U>::IsSet() const
+   \                     _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+   \        0x6   0x0B40             LSRS     R0,R0,#+13
+   \        0x8   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \        0xC   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
+   \        0x0   0x4901             LDR.N    R1,??Write_0     ;; 0x40020800
+   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Write_0:
+   \        0x8   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp uint32_t RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+   \                     _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??Get_0       ;; 0x40020800
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Get_0:
+   \        0x8   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp uint32_t RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+   \                     _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??Get_1       ;; 0x40020810
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Get_1:
+   \        0x8   0x4002'0810        DC32     0x40020810
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp bool Button<UserButtonPin>::IsPushed() const
+   \                     _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x4805             LDR.N    R0,??IsPushed_0
+   \        0x4   0x6801             LDR      R1,[R0, #+0]
+   \        0x6   0x6889             LDR      R1,[R1, #+8]
+   \        0x8   0x4788             BLX      R1
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD101             BNE.N    ??IsPushed_1
+   \        0xE   0x2001             MOVS     R0,#+1
+   \       0x10   0xE000             B.N      ??IsPushed_2
+   \                     ??IsPushed_1: (+1)
+   \       0x12   0x2000             MOVS     R0,#+0
+   \                     ??IsPushed_2: (+1)
+   \       0x14   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x16   0xBD02             POP      {R1,PC}          ;; return
+   \                     ??IsPushed_0:
+   \       0x18   0x....'....        DC32     UserButtonPin
+
+   \                                 In section .data, align 4
+   \   __absolute GpioPort<GPIOC, 13U> UserButtonPin
+   \                     UserButtonPin:
+   \        0x0   0x....'....        DC32 _ZTV8GpioPortI5GPIOCLj13EE + 0x8
+      2          
+
+   \                                 In section .text, align 2, keep-with-next
+      3          void ButtonTask::Execute()
+      4          {
+   \                     _ZN10ButtonTask7ExecuteEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+      5            for(;;)
+      6            {
+      7              if (userButton.IsPushed())
+   \                     ??Execute_0: (+1)
+   \        0x4   0xF514 0x7017      ADDS     R0,R4,#+604
+   \        0x8   0x....'....        BL       _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv
+   \        0xC   0x2800             CMP      R0,#+0
+   \        0xE   0xD003             BEQ.N    ??Execute_1
+      8              {
+      9                myEvent.Signal();
+   \       0x10   0xF8D4 0x0260      LDR      R0,[R4, #+608]
+   \       0x14   0x....'....        BL       _ZN9OsWrapper5Event6SignalEv
+   \                     ??Execute_1: (+1)
+   \       0x18   0x....             LDR.N    R2,??DataTable2
+   \       0x1A   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+     10              }
+     11              Sleep(300ms);
+   \       0x1E   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x22   0xE7EF             B.N      ??Execute_0
+     12            }
+     13          }
+     14          
+
+   \                                 In section .text, align 2, keep-with-next
+   \   __code __interwork __vfp ButtonTask::subobject ButtonTask(OsWrapper::Event &)
+   \                     _ZN10ButtonTaskC2ERN9OsWrapper5EventE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN10ButtonTaskC1ERN9OsWrapper5EventE
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2, keep-with-next
+     15          ButtonTask::ButtonTask(OsWrapper::Event& event): myEvent(event)
+     16          {
+   \                     _ZN10ButtonTaskC1ERN9OsWrapper5EventE: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0020             MOVS     R0,R4
+   \        0x8   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+   \        0xC   0x....             LDR.N    R0,??DataTable2_1
+   \        0xE   0x6020             STR      R0,[R4, #+0]
+   \       0x10   0xF8C4 0x5260      STR      R5,[R4, #+608]
+     17          }
+   \       0x14   0x0020             MOVS     R0,R4
+   \       0x16   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \        0x0   0x....'....        DC32     _ZTV10ButtonTask+0x8
+
+   \                                 In section .rodata, align 8
+   \                     ?_0:
+   \        0x0   0x0000'0000'0      DC64 300
+   \              000'012C     
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Button<UserButtonPin>::IsPushed() const
+         8   -- Indirect call
+      16   ButtonTask::ButtonTask(OsWrapper::Event &)
+        16   -> OsWrapper::Thread<128U>::subobject Thread()
+       8   ButtonTask::Execute()
+         8   -> Button<UserButtonPin>::IsPushed() const
+         8   -> OsWrapper::Event::Signal()
+         8   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+       8   ButtonTask::subobject ButtonTask(OsWrapper::Event &)
+         8   -> ButtonTask::ButtonTask(OsWrapper::Event &)
+       8   GpioPort<GPIOC, 13U>::IsSet() const
+         8   -> RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+       8   GpioPort<GPIOC, 13U>::SetAlternate() const
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       8   GpioPort<GPIOC, 13U>::SetInput() const
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       8   OsWrapper::Event::Signal()
+         8   -> OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+       0   OsWrapper::IThread::IThread()
+      24   OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+        24   -> OsWrapper::RtosWrapper::wSleep(uint32_t)
+        24   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+        24   -> std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       8   OsWrapper::IThread::subobject IThread()
+         8   -> OsWrapper::IThread::IThread()
+       8   OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+         8   -> xTimerPendFunctionCallFromISR
+       8   OsWrapper::RtosWrapper::wSleep(uint32_t)
+         8   -> vTaskDelay
+       8   OsWrapper::Thread<128U>::Thread()
+         8   -> OsWrapper::IThread::subobject IThread()
+       8   OsWrapper::Thread<128U>::subobject Thread()
+         8   -> OsWrapper::Thread<128U>::Thread()
+       0   RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+       0   RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       0   RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+       0   std::chrono::duration<__int64_t, std::milli>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+      16   std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+        16   -> std::chrono::duration<__int64_t, std::milli>::count() const
+        16   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+        16 __aeabi_ldivmod
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       8  ?_0
+      28  Button<UserButtonPin>::IsPushed() const
+      24  ButtonTask::ButtonTask(OsWrapper::Event &)
+      36  ButtonTask::Execute()
+       8  ButtonTask::subobject ButtonTask(OsWrapper::Event &)
+      14  GpioPort<GPIOC, 13U>::IsSet() const
+      32  GpioPort<GPIOC, 13U>::SetAlternate() const
+      24  GpioPort<GPIOC, 13U>::SetInput() const
+      10  OsWrapper::Event::Signal()
+      10  OsWrapper::IThread::IThread()
+      26  OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+       8  OsWrapper::IThread::subobject IThread()
+      56  OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
+       8  OsWrapper::RtosWrapper::wSleep(uint32_t)
+      14  OsWrapper::Thread<128U>::Thread()
+       8  OsWrapper::Thread<128U>::subobject Thread()
+      12  RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+      12  RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+      12  RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+       4  UserButtonPin
+       6  std::chrono::duration<__int64_t, std::milli>::count() const
+       4  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+       6  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+      28  std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       1  std::chrono::steady_clock::is_steady
+       1  std::chrono::system_clock::is_monotonic
+       1  std::chrono::system_clock::is_steady
+     208  -- Other
+
+ 
+   4 bytes in section .data
+ 219 bytes in section .rodata
+ 394 bytes in section .text
+ 
+ 76 bytes of CODE  memory (+ 318 bytes shared)
+  8 bytes of CONST memory (+ 211 bytes shared)
+  0 bytes of DATA  memory (+   4 bytes shared)
+
+Errors: none
+Warnings: none

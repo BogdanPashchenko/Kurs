@@ -15,6 +15,6 @@ public:
   ButtonTask(OsWrapper::Event& event);
 
 private:
-  Button<static_cast<IGpio&>(UserButtonPin)> userButton;
+  Button<UserButtonPin> userButton;
   OsWrapper::Event& myEvent;
 };

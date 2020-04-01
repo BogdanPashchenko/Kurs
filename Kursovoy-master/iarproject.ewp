@@ -2139,6 +2139,15 @@
         <file>
             <name>$PROJ_DIR$\AHardware\GpioPort.hpp</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\AHardware\IGpio.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\AHardware\Pinsconfig.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\AHardware\SPIconfig.hpp</name>
+        </file>
     </group>
     <group>
         <name>Application</name>
@@ -2147,6 +2156,12 @@
         </file>
         <file>
             <name>$PROJ_DIR$\Application\ButtonTask.hpp</name>
+        </file>
+    </group>
+    <group>
+        <name>MyTask</name>
+        <file>
+            <name>$PROJ_DIR$\Application\ButtonTask.cpp</name>
         </file>
     </group>
     <group>

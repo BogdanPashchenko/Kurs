@@ -1,7 +1,6 @@
 #pragma once
-#include "IGpio.hpp" //for IGpio
 
-template<IGpio & pin>
+template<auto& pin>
 class Button
 {
   public:
