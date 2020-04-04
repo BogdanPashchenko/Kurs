@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         01/Apr/2020  18:43:10
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         03/Apr/2020  19:56:14
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EW5C7.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EWFB02.tmp
 #        (D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp -lC
 #        D:\POIP\Kursovoy\Kursovoy-master\Debug\List -lA
 #        D:\POIP\Kursovoy\Kursovoy-master\Debug\List -o
@@ -45,8 +45,9 @@
 #        -I
 #        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Atomic\
 #        -I D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\Singleton\ -Ol
-#        --c++ --no_exceptions --no_rtti)
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\Singleton\ -I
+#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Spi\
+#        -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
 #    List file    =  D:\POIP\Kursovoy\Kursovoy-master\Debug\List\ButtonTask.lst
 #    Object file  =  D:\POIP\Kursovoy\Kursovoy-master\Debug\Obj\ButtonTask.o

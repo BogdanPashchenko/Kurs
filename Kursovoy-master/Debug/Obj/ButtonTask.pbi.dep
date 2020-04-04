@@ -1,7 +1,7 @@
 ButtonTask.pbi: \
-  D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Application/ButtonTask.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\thread.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Application/ButtonTask.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\thread.hpp \
   D:\Kolody\iarn\arm\inc\cpp\array D:\Kolody\iarn\arm\inc\cpp\algorithm \
   D:\Kolody\iarn\arm\inc\cpp\xmemory D:\Kolody\iarn\arm\inc\cpp\xmemory0 \
   D:\Kolody\iarn\arm\inc\cpp\cstdint D:\Kolody\iarn\arm\inc\c\stdint.h \
@@ -48,49 +48,49 @@ ButtonTask.pbi: \
   D:\Kolody\iarn\arm\inc\cpp\system_error \
   D:\Kolody\iarn\arm\inc\cpp\cerrno D:\Kolody\iarn\arm\inc\c\errno.h \
   D:\Kolody\iarn\arm\inc\cpp\tuple \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos\rtosdefs.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\FreeRtos.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/..\FreeRTOSConfig.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/projdefs.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/portable.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/deprecated_definitions.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\FreeRtos\rtosdefs.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\FreeRtos.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/..\FreeRTOSConfig.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/projdefs.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/portable.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/deprecated_definitions.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h \
   D:\Kolody\iarn\arm\inc\c\intrinsics.h \
   D:\Kolody\iarn\arm\inc\c\iccarm_builtin.h \
   D:\Kolody\iarn\arm\inc\c\iar_intrinsics_common.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/mpu_wrappers.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\task.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/list.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\semphr.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/queue.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\queue.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\timers.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/task.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\event_groups.h \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include/timers.h \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\susudefs.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\FreeRTOSConfig.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/mpu_wrappers.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\task.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/list.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\semphr.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/queue.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\queue.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\timers.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/task.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\event_groups.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include/timers.h \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\Common\susudefs.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\FreeRTOSConfig.h \
   D:\Kolody\iarn\arm\inc\cpp\chrono D:\Kolody\iarn\arm\inc\cpp\ratio \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos\rtoswrapper.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\eventmode.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\event.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper/eventmode.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\AHardware\GpioPort.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\AHardware/IGpio.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\gpiocregisters.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\fieldvalue.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/fieldvaluebase.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/accessmode.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/registerfield.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\FreeRtos\rtoswrapper.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\eventmode.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\event.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper/eventmode.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\GpioPort.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware/IGpio.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\gpiocregisters.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\fieldvalue.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/fieldvaluebase.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/accessmode.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/registerfield.hpp \
   D:\Kolody\iarn\arm\inc\cpp\cassert D:\Kolody\iarn\arm\inc\c\assert.h \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Atomic\atomicutils.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\registerbase.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/registertype.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\register.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/fieldvalue.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\accessmode.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\Application/Button.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\AHardware\IGpio.hpp \
-  D:\POIP\Kursovoy\Kursovoy-master\AHardware\PinsConfig.hpp
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Atomic\atomicutils.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\registerbase.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/registertype.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\register.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers/fieldvalue.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\accessmode.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\Application/Button.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\IGpio.hpp \
+  D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\PinsConfig.hpp

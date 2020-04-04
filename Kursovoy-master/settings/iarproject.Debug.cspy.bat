@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Kolody\iarn\common\bin\cspybat" -f "D:\POIP\Kursovoy\Kursovoy-master\settings\iarproject.Debug.general.xcl" --backend -f "D:\POIP\Kursovoy\Kursovoy-master\settings\iarproject.Debug.driver.xcl" 
+"D:\Kolody\iarn\common\bin\cspybat" -f "D:\POIP\Git_hub\Kurs\Kursovoy-master\settings\iarproject.Debug.general.xcl" --backend -f "D:\POIP\Git_hub\Kurs\Kursovoy-master\settings\iarproject.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Kolody\iarn\common\bin\cspybat" -f "D:\POIP\Kursovoy\Kursovoy-master\settings\iarproject.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\POIP\Kursovoy\Kursovoy-master\settings\iarproject.Debug.driver.xcl" 
+"D:\Kolody\iarn\common\bin\cspybat" -f "D:\POIP\Git_hub\Kurs\Kursovoy-master\settings\iarproject.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\POIP\Git_hub\Kurs\Kursovoy-master\settings\iarproject.Debug.driver.xcl" 
 
 @echo off 
 :end
