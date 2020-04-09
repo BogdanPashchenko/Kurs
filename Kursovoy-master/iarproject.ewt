@@ -2374,6 +2374,9 @@
     <group>
         <name>AHardware</name>
         <file>
+            <name>$PROJ_DIR$\AHardware\DislpayDriver.hpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\AHardware\GpioPort.hpp</name>
         </file>
         <file>
