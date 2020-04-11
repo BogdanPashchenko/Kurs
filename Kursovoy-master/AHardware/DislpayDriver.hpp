@@ -69,7 +69,7 @@ static constexpr unsigned char EPD_4IN2_lut_bb[] = {   //black black
 };
 
 template<typename SPI> 
-class DisplayDriver:public IGpio
+class DisplayDriver
 {
   
 private:
@@ -79,6 +79,7 @@ private:
   IGpio& busy;
   IGpio& din;
   IGpio& clk;  
+  
 public:
   
     int W = 400;
@@ -94,13 +95,12 @@ public:
   din.SetAlternate();
   clk.SetAlternate();
   
-  SPI::CR1::MSTR::Master::Set(); // SPI master
-  SPI::CR1::DFF::Data8bit::Set(); //format 8bit
-  SPI::CR1::CPOL::High::Set(); //cpol high
-  SPI::CR1::CPHA::Phase2edge::Set(); //cpha setup 
-  SPI::CR1::BR::PclockDiv2::Set(); //div2 baud rate
-  SPI::CR1::LSBFIRST::MsbFisrt::Set(); //starhii bit first
-  
+  SPI2::CR1::MSTR::Master::Set(); // SPI master
+  SPI2::CR1::DFF::Data8bit::Set(); //format 8bit
+  SPI2::CR1::CPOL::High::Set(); //cpol high
+  SPI2::CR1::CPHA::Phase2edge::Set(); //cpha setup 
+  SPI2::CR1::BR::PclockDiv2::Set(); //div2 baud rate
+  SPI2::CR1::LSBFIRST::MsbFisrt::Set(); //starhii bit first
 
   }
   
@@ -135,19 +135,19 @@ public:
     };    
   }
   
-  void SendCommand(ElinkDriverCommands)
+  void SendCommand(ElinkDriverCommands command)
   {
     dc.Reset();
     cs.Reset();
-    SPI::WriteByte();
+    SPI::WriteByte(static_cast<std::uint8_t>(command));
     cs.Set();
   }
   
-  void SendData(uint8_t data)
+  void SendData(std::uint8_t data )
   {
     dc.Set();
     cs.Reset();
-    SPI::WriteByte();
+    SPI::WriteByte(data);
     cs.Set(); 
   }
   

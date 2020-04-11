@@ -58,12 +58,25 @@ int main()
 {
   GpioPort<GPIOC,13> GPort;
   GPort.SetAlternate();
-  DisplayDriver Display;
+  GpioPort<GPIOA,1> DCPort;
+  DCPort.SetAlternate();
+  GpioPort<GPIOA,2> CSPort;
+  CSPort.SetAlternate();
+  GpioPort<GPIOA,3> RSTPort;
+  RSTPort.SetAlternate();
+  GpioPort<GPIOA,4> BUSYPort;
+  BUSYPort.SetAlternate(); 
+  GpioPort<GPIOA,5> DINPort;
+  DINPort.SetAlternate();
+  GpioPort<GPIOA,6> CLKPort;
+  CLKPort.SetAlternate();
+  
+  DisplayDriver<Spi<SPI2>> Display(DCPort,CSPort,RSTPort,BUSYPort,DINPort,CLKPort);
+  Display.Init();
   Display.ClearDisplay ();
   using namespace OsWrapper;
   Rtos::CreateThread(myButtonTask,"Button", ThreadPriority::normal);
   //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);   //FIXME Чисто для примера
   Rtos::Start();
-
   return 0;
 }
