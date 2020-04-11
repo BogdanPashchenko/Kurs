@@ -10,6 +10,7 @@
 #include "gpioaregisters.hpp"
 #include "spi2registers.hpp" //for setup SPI
 #include "SPI.hpp" //for Button
+#include "DislpayDriver.hpp" //for Display
 
 std::uint32_t SystemCoreClock = 16'000'000U;
 
@@ -57,6 +58,8 @@ int main()
 {
   GpioPort<GPIOC,13> GPort;
   GPort.SetAlternate();
+  DisplayDriver Display;
+  Display.ClearDisplay ();
   using namespace OsWrapper;
   Rtos::CreateThread(myButtonTask,"Button", ThreadPriority::normal);
   //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);   //FIXME Чисто для примера

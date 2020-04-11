@@ -26,4 +26,18 @@ public:
   {
     return ((GPIOModule::IDR::Get() & (1 << pinNum)) !=0);
   }
+  
+    void Set() const override
+    {
+      auto value = GPIOModule::ODR::Get();
+      value |= (1 << (pinNum));
+      GPIOModule::ODR::Write(value);
+    }
+
+    void Reset() const override
+    {
+      auto value = GPIOModule::ODR::Get();
+      value |= (1 << (pinNum));
+      GPIOModule::ODR::Write(value);
+    }
 };

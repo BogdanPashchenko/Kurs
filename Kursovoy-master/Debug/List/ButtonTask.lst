@@ -1,60 +1,65 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         03/Apr/2020  19:56:14
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         11/Apr/2020  12:41:16
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =
-#        D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWFB02.tmp
-#        (D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp -lC
-#        D:\POIP\Kursovoy\Kursovoy-master\Debug\List -lA
-#        D:\POIP\Kursovoy\Kursovoy-master\Debug\List -o
-#        D:\POIP\Kursovoy\Kursovoy-master\Debug\Obj --no_cse --no_unroll
+#        -f C:\Users\User\AppData\Local\Temp\EW9B23.tmp
+#        (D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp -lC
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -lA
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -o
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\Obj --no_cse --no_unroll
 #        --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling
 #        --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp
 #        --dlib_config D:\Kolody\iarn\arm\inc\c\DLib_Config_Normal.h -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\wrapper\FreeRtos\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\include\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\Common\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
-#        -I D:\POIP\Kursovoy\Kursovoy-master\Rtos\FreeRtos\portable\MemMang\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\MyTasks\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Common\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\CMSIS\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Application\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\Application\Diagnostic\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\AHardware\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\AHardware\GpioPort\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\AHardware\IrqController\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Pin\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\wrapper\FreeRtos\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\include\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\Common\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
 #        -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\MemMang\
+#        -I D:\POIP\Git_hub\Kurs\Kursovoy-master\MyTasks\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Common\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\CMSIS\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\Diagnostic\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\GpioPort\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\IrqController\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Pin\
 #        -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
 #        -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Port\
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\STM32F411\
 #        -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Atomic\
-#        -I D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\Common\Singleton\ -I
-#        D:\POIP\Kursovoy\Kursovoy-master\..\CortexLib\AbstractHardware\Spi\
-#        -Ol --c++ --no_exceptions --no_rtti)
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Registers\
+#        -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Port\
+#        -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Atomic\
+#        -I D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\Common\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\Common\Singleton\ -I
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Spi\
+#        -I D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\ -Ol --c++
+#        --no_exceptions --no_rtti)
 #    Locale       =  C
-#    List file    =  D:\POIP\Kursovoy\Kursovoy-master\Debug\List\ButtonTask.lst
-#    Object file  =  D:\POIP\Kursovoy\Kursovoy-master\Debug\Obj\ButtonTask.o
+#    List file    =
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List\ButtonTask.lst
+#    Object file  =
+#        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\Obj\ButtonTask.o
 #
 ###############################################################################
 
-D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
+D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
       1          #include "ButtonTask.hpp"
 
    \                                 In section .text, align 2
@@ -234,6 +239,24 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
    \        0x8   0xF010 0x0001      ANDS     R0,R0,#0x1
    \        0xC   0xBD02             POP      {R1,PC}          ;; return
 
+   \                                 In section .text, align 2
+   \   __interwork __vfp void GpioPort<GPIOC, 13U>::Set() const
+   \                     _ZNK8GpioPortI5GPIOCLj13EE3SetEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv
+   \        0x6   0xF450 0x5000      ORRS     R0,R0,#0x2000
+   \        0xA   0x....'....        BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \        0xE   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void GpioPort<GPIOC, 13U>::Reset() const
+   \                     _ZNK8GpioPortI5GPIOCLj13EE5ResetEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv
+   \        0x6   0xF450 0x5000      ORRS     R0,R0,#0x2000
+   \        0xA   0x....'....        BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \        0xE   0xBD01             POP      {R0,PC}          ;; return
+
    \                                 In section .text, align 4
    \   __interwork __vfp void RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
    \                     _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
@@ -243,6 +266,16 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
    \        0x6   0xBF00             Nop      
    \                     ??Write_0:
    \        0x8   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073874964U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
+   \        0x0   0x4901             LDR.N    R1,??Write_1     ;; 0x40020814
+   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Write_1:
+   \        0x8   0x4002'0814        DC32     0x40020814
 
    \                                 In section .text, align 4
    \   __interwork __vfp uint32_t RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
@@ -263,6 +296,16 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
    \        0x6   0xBF00             Nop      
    \                     ??Get_1:
    \        0x8   0x4002'0810        DC32     0x40020810
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp uint32_t RegisterBase<1073874964U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+   \                     _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??Get_2       ;; 0x40020814
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Get_2:
+   \        0x8   0x4002'0814        DC32     0x40020814
 
    \                                 In section .text, align 4
    \   __interwork __vfp bool Button<UserButtonPin>::IsPushed() const
@@ -371,6 +414,12 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
          8   -> ButtonTask::ButtonTask(OsWrapper::Event &)
        8   GpioPort<GPIOC, 13U>::IsSet() const
          8   -> RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+       8   GpioPort<GPIOC, 13U>::Reset() const
+         8   -> RegisterBase<1073874964U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+         8   -> RegisterBase<1073874964U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       8   GpioPort<GPIOC, 13U>::Set() const
+         8   -> RegisterBase<1073874964U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+         8   -> RegisterBase<1073874964U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        8   GpioPort<GPIOC, 13U>::SetAlternate() const
          8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
          8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
@@ -397,6 +446,8 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
        0   RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
        0   RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        0   RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+       0   RegisterBase<1073874964U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+       0   RegisterBase<1073874964U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        0   std::chrono::duration<__int64_t, std::milli>::count() const
        0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
        0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
@@ -418,6 +469,8 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
       36  ButtonTask::Execute()
        8  ButtonTask::subobject ButtonTask(OsWrapper::Event &)
       14  GpioPort<GPIOC, 13U>::IsSet() const
+      16  GpioPort<GPIOC, 13U>::Reset() const
+      16  GpioPort<GPIOC, 13U>::Set() const
       32  GpioPort<GPIOC, 13U>::SetAlternate() const
       24  GpioPort<GPIOC, 13U>::SetInput() const
       10  OsWrapper::Event::Signal()
@@ -431,6 +484,8 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
       12  RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
       12  RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       12  RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+      12  RegisterBase<1073874964U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+      12  RegisterBase<1073874964U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        4  UserButtonPin
        6  std::chrono::duration<__int64_t, std::milli>::count() const
        4  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
@@ -439,15 +494,15 @@ D:\POIP\Kursovoy\Kursovoy-master\Application\ButtonTask.cpp
        1  std::chrono::steady_clock::is_steady
        1  std::chrono::system_clock::is_monotonic
        1  std::chrono::system_clock::is_steady
-     208  -- Other
+     216  -- Other
 
  
    4 bytes in section .data
- 219 bytes in section .rodata
- 394 bytes in section .text
+ 227 bytes in section .rodata
+ 450 bytes in section .text
  
- 76 bytes of CODE  memory (+ 318 bytes shared)
-  8 bytes of CONST memory (+ 211 bytes shared)
+ 76 bytes of CODE  memory (+ 374 bytes shared)
+  8 bytes of CONST memory (+ 219 bytes shared)
   0 bytes of DATA  memory (+   4 bytes shared)
 
 Errors: none

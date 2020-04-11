@@ -64,6 +64,8 @@ D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\Common\Singleton
 -I
 D:\POIP\Git_hub\Kurs\Kursovoy-master\..\CortexLib\AbstractHardware\Spi
 -I
+D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware
+-I
 D:\Kolody\iarn\arm\inc
 -I
 D:\Kolody\iarn\arm\inc\c
@@ -123,6 +125,8 @@ D:\POIP\Git_hub\Kurs\CortexLib\Common
 D:\POIP\Git_hub\Kurs\CortexLib\Common\Singleton
 -I
 D:\POIP\Git_hub\Kurs\CortexLib\AbstractHardware\Spi
+-I
+D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

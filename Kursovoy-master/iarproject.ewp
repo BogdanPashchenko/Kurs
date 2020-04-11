@@ -372,6 +372,7 @@
                     <state>$PROJ_DIR$\..\CortexLib\Common</state>
                     <state>$PROJ_DIR$\..\CortexLib\Common\Singleton</state>
                     <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Spi</state>
+                    <state>$PROJ_DIR$\AHardware</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2150,7 +2151,7 @@
             <name>$PROJ_DIR$\AHardware\Pinsconfig.hpp</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\AHardware\SPIconfig.hpp</name>
+            <name>$PROJ_DIR$\AHardware\SPI.hpp</name>
         </file>
     </group>
     <group>

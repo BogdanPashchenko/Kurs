@@ -1,10 +1,8 @@
 #pragma once
 
-#include "IGpio.hpp"
-#include "GpioPort.hpp" // for Port's
-#include "gpiocregisters.hpp" //for GPIOC-registers
+#include "IGpio.hpp" // for Port's
 #include "SPI.hpp" //for Button
-
+#include "GpioPort.hpp" // for Port's
 
 enum class ElinkDriverCommands
 {
@@ -72,60 +70,51 @@ static constexpr unsigned char EPD_4IN2_lut_bb[] = {   //black black
 
 template<typename SPI> 
 class DisplayDriver:public IGpio
-
+{
+  
 private:
-  
-  cspin IGpio&;
-  dcpin IGpio&;
-  rstpin IGpio&;
-  busypin IGpio&;
-  dinpin IGpio&;
-  clkpin IGpio&;
-  
+  IGpio& cs;
+  IGpio& dc;
+  IGpio& rst;
+  IGpio& busy;
+  IGpio& din;
+  IGpio& clk;  
 public:
-
-    static constexpr std::uint16_t WidthByte = (width % 8 == 0)? (width / 8 ): (width / 8 + 1);
-    static constexpr std::uint16_t HeightByte = height;
-    static constexpr Color foreground = Color::White ; //setup color 
-    static constexpr Color background = Color::Black ; //setup color
-      
- void DisplayDriver ()
+  
+    int W = 400;
+    int H = 300;
+    
+   DisplayDriver (IGpio& CS, IGpio& DC, IGpio& RST, IGpio& BUSY, IGpio& DIN, IGpio& CLK):cs(CS), dc(DC), rst(RST), busy(BUSY), din(DIN), clk(CLK)
   {
-  GpioPort<GPIOC,1> DCPin;
-  GpioPort<GPIOC,2> CSPin;
-  GpioPort<GPIOC,3> RSTPin;
-  GpioPort<GPIOC,4> BUSYPin;
-  GpioPort<GPIOC,5> DINPin;
-  GpioPort<GPIOC,6> CLKPin;
- 
-  DCPin.SetAlternative();
-  CSPin.SetAlternative();
-  RSTPin.SetAlternative();
-  BUSYPin.SetAlternative();
-  DINPin.SetAlternative();
-  CLKPin.SetAlternative();
+    
+  dc.SetAlternate();
+  cs.SetAlternate();
+  rst.SetAlternate();
+  busy.SetAlternate();
+  din.SetAlternate();
+  clk.SetAlternate();
   
-  SPI2::CR1::MSTR::Master::Set(); // SPI master
-  SPI2::CR1::DFF::Data8bit::Set(); //format 8bit
-  SPI2::CR1::CPOL::High::Set(); //cpol high
-  SPI2::CR1::CPHA::Phase2edge::Set(); //cpha setup 
-  SPI2::CR1::BR::PclockDiv2::Set(); //div2 baud rate
-  SPI2::CR1::LSBFIRST::MsbFisrt::Set(); //starhii bit first
+  SPI::CR1::MSTR::Master::Set(); // SPI master
+  SPI::CR1::DFF::Data8bit::Set(); //format 8bit
+  SPI::CR1::CPOL::High::Set(); //cpol high
+  SPI::CR1::CPHA::Phase2edge::Set(); //cpha setup 
+  SPI::CR1::BR::PclockDiv2::Set(); //div2 baud rate
+  SPI::CR1::LSBFIRST::MsbFisrt::Set(); //starhii bit first
   
-  SPI::Config(SPI2);
+
   }
   
  void Init()  //init start
   {
-    RSTPin :: Set(); //set rst in 1
-    RSTPin :: Reset(); //set rst in 0
-    RSTPin :: Set(); //set rst in 1
+    rst.Set(); //set rst in 1
+    rst.Reset(); //set rst in 0
+    rst.Set(); //set rst in 1
     SendCommand(ElinkDriverCommands::BoosterSoftStart);
     SendData(0x17);
     SendData(0x17);
     SendData(0x17); 
     SendCommand(ElinkDriverCommands::PowerOn);
-    while(BUSY == 0) 
+    while(busy.IsSet()) 
     {
     }; 
     SendCommand(ElinkDriverCommands::PanelSetting);
@@ -134,43 +123,39 @@ public:
         
   void ClearDisplay ()
   {
-   
    SendCommand(ElinkDriverCommands::DataStartTransmission1);
     for (int i = 0; i < W / 8 * H; i ++)
     {
-      SendData(0xFF);
+      SendData(0xFF); //0xFF = BlackColor
     };
     SendCommand(ElinkDriverCommands::DataStartTransmission2);
     for (int i = 0; i < W / 8 * H; i ++) 
     {
-      SendData(0xFF);
+      SendData(0xFF); //0xFF = BlackColor
     };    
   }
   
   void SendCommand(ElinkDriverCommands)
   {
-    DCPin::Reset();
-    CSPin::Reset();
-    SPI::WriteByte(command);
-    CSPin::Set();
+    dc.Reset();
+    cs.Reset();
+    SPI::WriteByte();
+    cs.Set();
   }
   
-  void SendData(uint8_t: data)
+  void SendData(uint8_t data)
   {
-    DCPin::Set();
-    CSPin::Reset();
-    SPI::WriteByte(data);
-    CSPin::Set(); 
+    dc.Set();
+    cs.Reset();
+    SPI::WriteByte();
+    cs.Set(); 
   }
   
   void Refresh ()
   {
-    RSTPin::Set(); //set rst in 1
-    DelayMs(200);
-    RSTPin::Reset(); //set rst in 0
-    DelayMs(200);
-    RSTPin::Set(); //set rst in 1
-    DelayMs(200);
+    rst.Set(); //set rst in 1
+    rst.Reset(); //set rst in 0
+    rst.Set(); //set rst in 1
   }
  
    void SetLut() 
@@ -201,8 +186,7 @@ public:
     {
       SendData(EPD_4IN2_lut_bb[i]);
     }    
-  }
-  
+  } 
 };
   
 
