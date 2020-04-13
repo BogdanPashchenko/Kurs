@@ -88,19 +88,25 @@ public:
    DisplayDriver (IGpio& CS, IGpio& DC, IGpio& RST, IGpio& BUSY, IGpio& DIN, IGpio& CLK):cs(CS), dc(DC), rst(RST), busy(BUSY), din(DIN), clk(CLK)
   {
     
-  dc.SetAlternate();
-  cs.SetAlternate();
-  rst.SetAlternate();
-  busy.SetAlternate();
+  dc.SetOutput();
+  cs.SetOutput();
+  rst.SetOutput();
+  busy.SetInput();
   din.SetAlternate();
   clk.SetAlternate();
   
   SPI2::CR1::MSTR::Master::Set(); // SPI master
+  SPI2::CR1::BIDIMODE::Unidirectional2Line::Set(); //2linii peredachi
   SPI2::CR1::DFF::Data8bit::Set(); //format 8bit
   SPI2::CR1::CPOL::High::Set(); //cpol high
-  SPI2::CR1::CPHA::Phase2edge::Set(); //cpha setup 
-  SPI2::CR1::BR::PclockDiv2::Set(); //div2 baud rate
+  SPI2::CR1::CPHA::Phase2edge::Set(); //cpha setup  
+  SPI2::CR1::SSM::NssSoftwareEnable::Set(); //ti net => want ssm and ssi
+  SPI2::CR1::SSI::Value1::Set();
+  SPI2::CR1::BR::PclockDiv2::Set(); 
   SPI2::CR1::LSBFIRST::MsbFisrt::Set(); //starhii bit first
+  SPI2::CR1::CRCEN::CrcCalcDisable::Set() ;
+  SPI2::CR1::SPE::Enable::Set(); //vkluchenie spi
+  SPI2::CR1::SPE::Enable::Set(); //spi on
 
   }
   

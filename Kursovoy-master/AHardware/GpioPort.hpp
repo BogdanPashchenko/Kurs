@@ -22,6 +22,14 @@ public:
     GPIOModule::MODER::Write(value); //comeback 
   }
   
+    void SetOutput() const override
+  {
+    volatile auto value = GPIOModule::MODER::Get() ; //chitivaem znachenia moder
+    value &= ~(3 << (pinNum * 2U)) ; //skinyli vse chto tam stoit 
+    value |= (GPIOModule::MODER::FieldValues::Output::Value << (pinNum * 2U)) ; //setup new znachenie
+    GPIOModule::MODER::Write(value); //comeback 
+  }
+  
   bool IsSet() const override
   {
     return ((GPIOModule::IDR::Get() & (1 << pinNum)) !=0);

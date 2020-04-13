@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         11/Apr/2020  19:38:59
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         13/Apr/2020  20:58:25
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWC39D.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EWE39.tmp
 #        (D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp -lC
 #        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -lA
 #        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -o
@@ -231,6 +231,22 @@ D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
    \       0x16   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .text, align 2
+   \   __interwork __vfp void GpioPort<GPIOC, 13U>::SetOutput() const
+   \                     _ZNK8GpioPortI5GPIOCLj13EE9SetOutputEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x9800             LDR      R0,[SP, #+0]
+   \        0xA   0xF030 0x6040      BICS     R0,R0,#0xC000000
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x9800             LDR      R0,[SP, #+0]
+   \       0x12   0xF050 0x6080      ORRS     R0,R0,#0x4000000
+   \       0x16   0x9000             STR      R0,[SP, #+0]
+   \       0x18   0x9800             LDR      R0,[SP, #+0]
+   \       0x1A   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \       0x1E   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
    \   __interwork __vfp bool GpioPort<GPIOC, 13U>::IsSet() const
    \                     _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
@@ -313,7 +329,7 @@ D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x4805             LDR.N    R0,??IsPushed_0
    \        0x4   0x6801             LDR      R1,[R0, #+0]
-   \        0x6   0x6889             LDR      R1,[R1, #+8]
+   \        0x6   0x68C9             LDR      R1,[R1, #+12]
    \        0x8   0x4788             BLX      R1
    \        0xA   0x2800             CMP      R0,#+0
    \        0xC   0xD101             BNE.N    ??IsPushed_1
@@ -426,6 +442,9 @@ D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
        8   GpioPort<GPIOC, 13U>::SetInput() const
          8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
          8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       8   GpioPort<GPIOC, 13U>::SetOutput() const
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        8   OsWrapper::Event::Signal()
          8   -> OsWrapper::RtosWrapper::wSignalEvent(void * const &, uint32_t)
        0   OsWrapper::IThread::IThread()
@@ -473,6 +492,7 @@ D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
       16  GpioPort<GPIOC, 13U>::Set() const
       32  GpioPort<GPIOC, 13U>::SetAlternate() const
       24  GpioPort<GPIOC, 13U>::SetInput() const
+      32  GpioPort<GPIOC, 13U>::SetOutput() const
       10  OsWrapper::Event::Signal()
       10  OsWrapper::IThread::IThread()
       26  OsWrapper::IThread::Sleep(std::chrono::milliseconds)
@@ -494,15 +514,15 @@ D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
        1  std::chrono::steady_clock::is_steady
        1  std::chrono::system_clock::is_monotonic
        1  std::chrono::system_clock::is_steady
-     216  -- Other
+     220  -- Other
 
  
    4 bytes in section .data
- 227 bytes in section .rodata
- 450 bytes in section .text
+ 231 bytes in section .rodata
+ 482 bytes in section .text
  
- 76 bytes of CODE  memory (+ 374 bytes shared)
-  8 bytes of CONST memory (+ 219 bytes shared)
+ 76 bytes of CODE  memory (+ 406 bytes shared)
+  8 bytes of CONST memory (+ 223 bytes shared)
   0 bytes of DATA  memory (+   4 bytes shared)
 
 Errors: none

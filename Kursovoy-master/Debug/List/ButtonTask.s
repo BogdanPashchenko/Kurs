@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        11/Apr/2020  19:38:59
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        13/Apr/2020  20:58:25
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWC39D.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EWE39.tmp
 //        (D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp -lC
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -lA
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -o
@@ -102,6 +102,7 @@
         PUBLIC _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv
         PUBLIC _ZNK8GpioPortI5GPIOCLj13EE5ResetEv
         PUBLIC _ZNK8GpioPortI5GPIOCLj13EE8SetInputEv
+        PUBLIC _ZNK8GpioPortI5GPIOCLj13EE9SetOutputEv
         PUBLIC _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
         PUBLIC _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
         PUBLIC _ZNSt6chrono12steady_clock9is_steadyE
@@ -256,12 +257,13 @@ _ZTI8GpioPortI5GPIOCLj13EE:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV8GpioPortI5GPIOCLj13EE
         DATA
-// __absolute void (*const GpioPort<GPIOC, 13U>::__vtbl[7])()
+// __absolute void (*const GpioPort<GPIOC, 13U>::__vtbl[8])()
 _ZTV8GpioPortI5GPIOCLj13EE:
         DATA32
         DC32 0x0, _ZTI8GpioPortI5GPIOCLj13EE
         DC32 _ZNK8GpioPortI5GPIOCLj13EE12SetAlternateEv
         DC32 _ZNK8GpioPortI5GPIOCLj13EE8SetInputEv
+        DC32 _ZNK8GpioPortI5GPIOCLj13EE9SetOutputEv
         DC32 _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv
         DC32 _ZNK8GpioPortI5GPIOCLj13EE3SetEv
         DC32 _ZNK8GpioPortI5GPIOCLj13EE5ResetEv
@@ -701,8 +703,33 @@ _ZNK8GpioPortI5GPIOCLj13EE8SetInputEv:
           CFI EndBlock cfiBlock16
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv
+        SECTION_GROUP _ZNK8GpioPortI5GPIOCLj13EE9SetOutputEv
           CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function _ZNK8GpioPortI5GPIOCLj13EE9SetOutputEv
+        THUMB
+// __interwork __vfp void GpioPort<GPIOC, 13U>::SetOutput() const
+_ZNK8GpioPortI5GPIOCLj13EE9SetOutputEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        STR      R0,[SP, #+0]
+        LDR      R0,[SP, #+0]
+        BICS     R0,R0,#0xC000000
+        STR      R0,[SP, #+0]
+        LDR      R0,[SP, #+0]
+        ORRS     R0,R0,#0x4000000
+        STR      R0,[SP, #+0]
+        LDR      R0,[SP, #+0]
+          CFI FunCall _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock17
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv
+          CFI Block cfiBlock18 Using cfiCommon0
           CFI Function _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv
         THUMB
 // __interwork __vfp bool GpioPort<GPIOC, 13U>::IsSet() const
@@ -715,11 +742,11 @@ _ZNK8GpioPortI5GPIOCLj13EE5IsSetEv:
         LSRS     R0,R0,#+13
         ANDS     R0,R0,#0x1
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock17
+          CFI EndBlock cfiBlock18
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZNK8GpioPortI5GPIOCLj13EE3SetEv
-          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Block cfiBlock19 Using cfiCommon0
           CFI Function _ZNK8GpioPortI5GPIOCLj13EE3SetEv
         THUMB
 // __interwork __vfp void GpioPort<GPIOC, 13U>::Set() const
@@ -733,11 +760,11 @@ _ZNK8GpioPortI5GPIOCLj13EE3SetEv:
           CFI FunCall _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock18
+          CFI EndBlock cfiBlock19
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZNK8GpioPortI5GPIOCLj13EE5ResetEv
-          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Block cfiBlock20 Using cfiCommon0
           CFI Function _ZNK8GpioPortI5GPIOCLj13EE5ResetEv
         THUMB
 // __interwork __vfp void GpioPort<GPIOC, 13U>::Reset() const
@@ -751,11 +778,11 @@ _ZNK8GpioPortI5GPIOCLj13EE5ResetEv:
           CFI FunCall _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock19
+          CFI EndBlock cfiBlock20
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Block cfiBlock21 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
@@ -769,11 +796,11 @@ _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
 ??Write_0:
         DATA32
         DC32     0x40020800
-          CFI EndBlock cfiBlock20
+          CFI EndBlock cfiBlock21
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
-          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Block cfiBlock22 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
@@ -787,11 +814,11 @@ _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
 ??Write_1:
         DATA32
         DC32     0x40020814
-          CFI EndBlock cfiBlock21
+          CFI EndBlock cfiBlock22
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
-          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Block cfiBlock23 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -805,11 +832,11 @@ _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv:
 ??Get_0:
         DATA32
         DC32     0x40020800
-          CFI EndBlock cfiBlock22
+          CFI EndBlock cfiBlock23
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
-          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Block cfiBlock24 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -823,11 +850,11 @@ _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
 ??Get_1:
         DATA32
         DC32     0x40020810
-          CFI EndBlock cfiBlock23
+          CFI EndBlock cfiBlock24
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv
-          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Block cfiBlock25 Using cfiCommon0
           CFI Function _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv
           CFI NoCalls
         THUMB
@@ -841,11 +868,11 @@ _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv:
 ??Get_2:
         DATA32
         DC32     0x40020814
-          CFI EndBlock cfiBlock24
+          CFI EndBlock cfiBlock25
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv
-          CFI Block cfiBlock25 Using cfiCommon0
+          CFI Block cfiBlock26 Using cfiCommon0
           CFI Function _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv
         THUMB
 // __interwork __vfp bool Button<UserButtonPin>::IsPushed() const
@@ -855,7 +882,7 @@ _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv:
           CFI CFA R13+8
         LDR.N    R0,??IsPushed_0
         LDR      R1,[R0, #+0]
-        LDR      R1,[R1, #+8]
+        LDR      R1,[R1, #+12]
           CFI FunCall
         BLX      R1
         CMP      R0,#+0
@@ -871,14 +898,14 @@ _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv:
 ??IsPushed_0:
         DATA32
         DC32     UserButtonPin
-          CFI EndBlock cfiBlock25
+          CFI EndBlock cfiBlock26
 
         SECTION `.iar_vfe_vtableinfo_ZTV8GpioPortI5GPIOCLj13EE`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         SECTION_GROUP _ZTV8GpioPortI5GPIOCLj13EE
         DATA
         DC32    _ZTV8GpioPortI5GPIOCLj13EE
-        DC32    7
+        DC32    8
         DC32    2
         DC32    _ZTI5IGpio
         DC32    0
@@ -931,7 +958,7 @@ _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv:
         DC32    1
         DC32    _ZTI8GpioPortI5GPIOCLj13EE
         DC32    1
-        DC32    4
+        DC32    8
         DC32    0
         DC32    0
 
@@ -943,11 +970,11 @@ _ZNK6ButtonIL_Z13UserButtonPinEE8IsPushedEv:
         END
 // 
 //   4 bytes in section .data
-// 227 bytes in section .rodata
-// 450 bytes in section .text
+// 231 bytes in section .rodata
+// 482 bytes in section .text
 // 
-// 76 bytes of CODE  memory (+ 374 bytes shared)
-//  8 bytes of CONST memory (+ 219 bytes shared)
+// 76 bytes of CODE  memory (+ 406 bytes shared)
+//  8 bytes of CONST memory (+ 223 bytes shared)
 //  0 bytes of DATA  memory (+   4 bytes shared)
 //
 //Errors: none

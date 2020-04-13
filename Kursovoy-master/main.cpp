@@ -45,6 +45,8 @@ int __low_level_init(void)
   RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
   RCC::APB1ENR::SPI2EN::Enable::Set(); //SPI k istochiky taktirovaniya  
 
+  GPIOA::AFRL::AFRL5::Af5::Set(); 
+  GPIOA::AFRL::AFRL6::Af5::Set();
   return 1;
 }
 }
@@ -59,13 +61,13 @@ int main()
   GpioPort<GPIOC,13> GPort;
   GPort.SetAlternate();
   GpioPort<GPIOA,1> DCPort;
-  DCPort.SetAlternate();
+  DCPort.SetOutput();
   GpioPort<GPIOA,2> CSPort;
-  CSPort.SetAlternate();
+  CSPort.SetOutput();
   GpioPort<GPIOA,3> RSTPort;
-  RSTPort.SetAlternate();
+  RSTPort.SetOutput();
   GpioPort<GPIOA,4> BUSYPort;
-  BUSYPort.SetAlternate(); 
+  BUSYPort.SetInput();
   GpioPort<GPIOA,5> DINPort;
   DINPort.SetAlternate();
   GpioPort<GPIOA,6> CLKPort;
