@@ -88,12 +88,12 @@ public:
    DisplayDriver (IGpio& CS, IGpio& DC, IGpio& RST, IGpio& BUSY, IGpio& DIN, IGpio& CLK):cs(CS), dc(DC), rst(RST), busy(BUSY), din(DIN), clk(CLK)
   {
     
-  dc.SetOutput();
-  cs.SetOutput();
-  rst.SetOutput();
-  busy.SetInput();
-  din.SetAlternate();
-  clk.SetAlternate();
+  //dc.SetOutput();
+  //cs.SetOutput();
+  //rst.SetOutput();
+  //busy.SetInput();
+  //din.SetAlternate();
+  //clk.SetAlternate();
   
   SPI2::CR1::MSTR::Master::Set(); // SPI master
   SPI2::CR1::BIDIMODE::Unidirectional2Line::Set(); //2linii peredachi
