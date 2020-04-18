@@ -78,7 +78,8 @@ private:
   IGpio& rst;
   IGpio& busy;
   IGpio& din;
-  IGpio& clk;  
+  IGpio& clk;
+  
   
 public:
   
@@ -86,7 +87,7 @@ public:
     int H = 300;
     
    DisplayDriver (IGpio& CS, IGpio& DC, IGpio& RST, IGpio& BUSY, IGpio& DIN, IGpio& CLK):cs(CS), dc(DC), rst(RST), busy(BUSY), din(DIN), clk(CLK)
-  {
+   {
     
   //dc.SetOutput();
   //cs.SetOutput();
@@ -105,7 +106,6 @@ public:
   SPI2::CR1::BR::PclockDiv2::Set(); 
   SPI2::CR1::LSBFIRST::MsbFisrt::Set(); //starhii bit first
   SPI2::CR1::CRCEN::CrcCalcDisable::Set() ;
-  SPI2::CR1::SPE::Enable::Set(); //vkluchenie spi
   SPI2::CR1::SPE::Enable::Set(); //spi on
 
   }

@@ -7,7 +7,7 @@
 #include "ButtonTask.hpp" //for ButtonTask
 #include "gpioaregisters.hpp" //for GPIOA-registers
 #include "gpiocregisters.hpp" //for GPIOC-registers
-#include "gpioaregisters.hpp"
+#include "gpiobregisters.hpp" //for GPIOB-registers
 #include "spi2registers.hpp" //for setup SPI
 #include "SPI.hpp" //for Button
 #include "DislpayDriver.hpp" //for Display
@@ -58,22 +58,23 @@ ButtonTask myButtonTask(event);
 
 int main()
 {
-  GpioPort<GPIOC,13> GPort;
-  GPort.SetAlternate();
-  GpioPort<GPIOA,1> DCPort;
-  DCPort.SetOutput();
-  GpioPort<GPIOA,2> CSPort;
+  //GpioPort<GPIOC,13> GPort;
+  //GPort.SetAlternate();
+  
+  GpioPort<GPIOB, 1U> CSPort;
   CSPort.SetOutput();
-  GpioPort<GPIOA,3> RSTPort;
+  GpioPort<GPIOB, 2U> DCPort;
+  DCPort.SetOutput();
+  GpioPort<GPIOC, 3U> RSTPort;
   RSTPort.SetOutput();
-  GpioPort<GPIOA,4> BUSYPort;
+  GpioPort<GPIOC, 2U> BUSYPort;
   BUSYPort.SetInput();
-  GpioPort<GPIOA,5> DINPort;
+  GpioPort<GPIOC, 2U> DINPort;
   DINPort.SetAlternate();
-  GpioPort<GPIOA,6> CLKPort;
+  GpioPort<GPIOC, 3U> CLKPort;
   CLKPort.SetAlternate();
   
-  DisplayDriver<Spi<SPI2>> Display(DCPort,CSPort,RSTPort,BUSYPort,DINPort,CLKPort);
+  DisplayDriver<Spi<SPI2>> Display(CSPort,DCPort,RSTPort,BUSYPort,DINPort,CLKPort);
   Display.Init();
   Display.ClearDisplay ();
   using namespace OsWrapper;
