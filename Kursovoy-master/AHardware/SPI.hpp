@@ -16,7 +16,7 @@ class Spi
   
   static void WriteByte (uint8_t Byte)
   {
-    while (!SPIModule::SR::TXE::TxBufferNotEmpty::IsSet()) //TXE - shows reception is completed or not, priem
+    while (SPIModule::SR::TXE::TxBufferNotEmpty::IsSet()) //TXE - shows reception is completed or not, priem
     //has not yet completed - wait
     {
     }

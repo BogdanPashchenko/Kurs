@@ -42,7 +42,6 @@ int __low_level_init(void)
 
   }
 
-
   RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
   RCC::APB1ENR::SPI2EN::Enable::Set(); //SPI k istochiky taktirovaniya  
 
@@ -61,7 +60,6 @@ int __low_level_init(void)
 OsWrapper::Event event{500ms, 1}; //FIXME Чисто для примера
 ButtonTask myButtonTask(event);
 //MyTask myTask(event, UserButton::GetInstance()); //FIXME Чисто для примера
-
 
 int main()
 {

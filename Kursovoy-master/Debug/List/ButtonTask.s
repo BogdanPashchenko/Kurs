@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        18/Apr/2020  12:22:22
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        18/Apr/2020  13:16:40
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWECF1.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EWA026.tmp
 //        (D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp -lC
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -lA
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -o
@@ -774,7 +774,7 @@ _ZNK8GpioPortI5GPIOCLj13EE5ResetEv:
           CFI CFA R13+8
           CFI FunCall _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv
         BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE3GetIS0_vEEjv
-        ORRS     R0,R0,#0x2000
+        BICS     R0,R0,#0x2000
           CFI FunCall _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         POP      {R0,PC}          ;; return

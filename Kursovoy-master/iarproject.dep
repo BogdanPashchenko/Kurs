@@ -417,7 +417,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 129 81 82</file>
+                    <file> 81</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>

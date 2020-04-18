@@ -45,7 +45,7 @@ public:
     void Reset() const override
     {
       auto value = GPIOModule::ODR::Get();
-      value |= (1 << (pinNum));
+      value &=~(1 << (pinNum));
       GPIOModule::ODR::Write(value);
     }
 };

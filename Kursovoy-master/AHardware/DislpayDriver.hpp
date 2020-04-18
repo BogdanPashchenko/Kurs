@@ -17,6 +17,8 @@ W2wLut = 0x21,
 B2wLut = 0x22,
 W2bLut = 0x23,
 B2bLut = 0x24,
+VcomDataIntervalSetting  = 0x50,
+VCMDCSetting  = 0x82,
 };
 
   static constexpr unsigned char EPD_4IN2_lut_vcom0[] = {  
@@ -118,25 +120,42 @@ public:
     SendData(0x17);
     SendData(0x17); 
     SendCommand(ElinkDriverCommands::PowerOn);
-    while(busy.IsSet()) 
+    while(!busy.IsSet()) 
     {
     }; 
     SendCommand(ElinkDriverCommands::PanelSetting);
+    dc.Set();
+    cs.Reset();
     SendData(0x0F);
+    cs.Set();
+    SetLut();
+    SendCommand (ElinkDriverCommands::VCMDCSetting);
+    dc.Set();
+    cs.Reset();
+    SendData(0x12); //Display Refresh(DRF)
+    cs.Set();
+    SendCommand (ElinkDriverCommands::VcomDataIntervalSetting);
   }
         
   void ClearDisplay ()
   {
    SendCommand(ElinkDriverCommands::DataStartTransmission1);
+   dc.Set();
+   cs.Reset(); 
     for (int i = 0; i < W / 8 * H; i ++)
     {
       SendData(0xFF); //0xFF = BlackColor
     };
+    cs.Set();
     SendCommand(ElinkDriverCommands::DataStartTransmission2);
+    dc.Set();
+    cs.Reset();
     for (int i = 0; i < W / 8 * H; i ++) 
     {
       SendData(0xFF); //0xFF = BlackColor
-    };    
+    }
+    cs.Set();
+    Refresh();
   }
   
   void SendCommand(ElinkDriverCommands command)
@@ -155,13 +174,21 @@ public:
     cs.Set(); 
   }
   
-  void Refresh ()
+  void Reset ()
   {
     rst.Set(); //set rst in 1
     rst.Reset(); //set rst in 0
     rst.Set(); //set rst in 1
   }
- 
+  
+    void Refresh ()
+  {
+   SendCommand(ElinkDriverCommands::DisplayRefresh);
+   while(busy.IsSet())
+   {
+   };
+  }
+  
    void SetLut() 
   {
     unsigned int i;
