@@ -77,16 +77,14 @@ private:
   IGpio& dc;
   IGpio& rst;
   IGpio& busy;
-  IGpio& din;
-  IGpio& clk;
-  
-  
+
+    
 public:
   
     int W = 400;
     int H = 300;
     
-   DisplayDriver (IGpio& CS, IGpio& DC, IGpio& RST, IGpio& BUSY, IGpio& DIN, IGpio& CLK):cs(CS), dc(DC), rst(RST), busy(BUSY), din(DIN), clk(CLK)
+   DisplayDriver (IGpio& CS, IGpio& DC, IGpio& RST, IGpio& BUSY):cs(CS), dc(DC), rst(RST), busy(BUSY)
    {
     
   //dc.SetOutput();

@@ -47,11 +47,13 @@ int __low_level_init(void)
   RCC::APB1ENR::SPI2EN::Enable::Set(); //SPI k istochiky taktirovaniya  
 
   RCC::AHB1ENR::GPIOAEN::Enable::Set(); //GPIOA k istochiky taktirovaniya  
-  RCC::AHB1ENR::GPIOBEN::Enable::Set(); //GPIOB k istochiky taktirovaniya 
-  RCC::AHB1ENR::GPIOCEN::Enable::Set(); //GPIOC k istochiky taktirovaniya 
+  RCC::AHB1ENR::GPIOBEN::Enable::Set(); //GPIOA k istochiky taktirovaniya 
+  RCC::AHB1ENR::GPIOCEN::Enable::Set(); //GPIOA k istochiky taktirovaniya 
   
-  GPIOA::AFRL::AFRL5::Af5::Set(); 
-  GPIOA::AFRL::AFRL6::Af5::Set();
+  GPIOB::MODER::MODER13::Alternate::Set(); //Alternate moder 13
+  GPIOB::MODER::MODER15::Alternate::Set(); //Alternate moder 15
+  GPIOB::AFRH::AFRH13::Af5::Set(); 
+  GPIOB::AFRH::AFRH15::Af5::Set();
   return 1;
 }
 }
@@ -65,21 +67,21 @@ int main()
 {
   //GpioPort<GPIOC,13> GPort;
   //GPort.SetAlternate();
-  
+
   GpioPort<GPIOB, 1U> CSPort;
   CSPort.SetOutput();
-  GpioPort<GPIOB, 2U> DCPort;
+  GpioPort<GPIOB,2U> DCPort;
   DCPort.SetOutput();
   GpioPort<GPIOC, 3U> RSTPort;
   RSTPort.SetOutput();
   GpioPort<GPIOC, 2U> BUSYPort;
   BUSYPort.SetInput();
-  GpioPort<GPIOC, 2U> DINPort;
-  DINPort.SetAlternate();
-  GpioPort<GPIOC, 3U> CLKPort;
-  CLKPort.SetAlternate();
+  //GpioPort<GPIOB, 2U> DINPort;
+  //DINPort.SetAlternate();
+  //GpioPort<GPIOB, 3U> CLKPort;
+  //CLKPort.SetAlternate();
   
-  DisplayDriver<Spi<SPI2>> Display(CSPort,DCPort,RSTPort,BUSYPort,DINPort,CLKPort);
+  DisplayDriver<Spi<SPI2>> Display(CSPort,DCPort,RSTPort,BUSYPort); //,DINPort,CLKPort
   Display.Init();
   Display.ClearDisplay ();
   using namespace OsWrapper;
