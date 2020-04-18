@@ -41,10 +41,15 @@ int __low_level_init(void)
   {
 
   }
-  
+
+
   RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
   RCC::APB1ENR::SPI2EN::Enable::Set(); //SPI k istochiky taktirovaniya  
 
+  RCC::AHB1ENR::GPIOAEN::Enable::Set(); //GPIOA k istochiky taktirovaniya  
+  RCC::AHB1ENR::GPIOBEN::Enable::Set(); //GPIOB k istochiky taktirovaniya 
+  RCC::AHB1ENR::GPIOCEN::Enable::Set(); //GPIOC k istochiky taktirovaniya 
+  
   GPIOA::AFRL::AFRL5::Af5::Set(); 
   GPIOA::AFRL::AFRL6::Af5::Set();
   return 1;
