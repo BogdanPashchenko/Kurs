@@ -124,37 +124,25 @@ public:
     {
     }; 
     SendCommand(ElinkDriverCommands::PanelSetting);
-    dc.Set();
-    cs.Reset();
     SendData(0x0F);
-    cs.Set();
     SetLut();
     SendCommand (ElinkDriverCommands::VCMDCSetting);
-    dc.Set();
-    cs.Reset();
     SendData(0x12); //Display Refresh(DRF)
-    cs.Set();
     SendCommand (ElinkDriverCommands::VcomDataIntervalSetting);
   }
         
   void ClearDisplay ()
   {
-   SendCommand(ElinkDriverCommands::DataStartTransmission1);
-   dc.Set();
-   cs.Reset(); 
+   SendCommand(ElinkDriverCommands::DataStartTransmission1); 
     for (int i = 0; i < W / 8 * H; i ++)
     {
       SendData(0xFF); //0xFF = BlackColor
     };
-    cs.Set();
     SendCommand(ElinkDriverCommands::DataStartTransmission2);
-    dc.Set();
-    cs.Reset();
     for (int i = 0; i < W / 8 * H; i ++) 
     {
       SendData(0xFF); //0xFF = BlackColor
     }
-    cs.Set();
     Refresh();
   }
   

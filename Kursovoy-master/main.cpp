@@ -51,8 +51,8 @@ int __low_level_init(void)
   
   GPIOB::MODER::MODER13::Alternate::Set(); //Alternate moder 13
   GPIOB::MODER::MODER15::Alternate::Set(); //Alternate moder 15
-  GPIOB::AFRH::AFRH13::Af5::Set(); 
-  GPIOB::AFRH::AFRH15::Af5::Set();
+  GPIOB::AFRH::AFRH13::Af5::Set();  //clk
+  GPIOB::AFRH::AFRH15::Af5::Set(); //din
   return 1;
 }
 }
