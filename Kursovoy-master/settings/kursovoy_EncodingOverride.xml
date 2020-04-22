@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userOverrides>
+    <override>
+        <path>D:\POIP\Git_hub\Kurs\Kursovoy-master\AHardware\USART.hpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>D:\POIP\Git_hub\Kurs\Kursovoy-master\main.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+</userOverrides>

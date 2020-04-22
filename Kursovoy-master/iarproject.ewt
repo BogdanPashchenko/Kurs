@@ -2388,6 +2388,9 @@
         <file>
             <name>$PROJ_DIR$\AHardware\SPI.hpp</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\AHardware\USART.hpp</name>
+        </file>
     </group>
     <group>
         <name>Application</name>
