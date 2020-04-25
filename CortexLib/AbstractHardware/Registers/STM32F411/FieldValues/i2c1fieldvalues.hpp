@@ -247,15 +247,15 @@ struct I2C1_SR1_BERR_Values: public RegisterField<Reg, offset, size, AccessMode>
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct I2C1_SR1_TxE_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<I2C1_SR1_TxE_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<I2C1_SR1_TxE_Values, BaseType, 1U> ;
+  using DataNotEmply = FieldValue<I2C1_SR1_TxE_Values, BaseType, 0U> ;
+  using DataRegisterEmply = FieldValue<I2C1_SR1_TxE_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct I2C1_SR1_RxNE_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<I2C1_SR1_RxNE_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<I2C1_SR1_RxNE_Values, BaseType, 1U> ;
+  using DataRegisterEmply = FieldValue<I2C1_SR1_RxNE_Values, BaseType, 0U> ;
+  using DataRegisterNotEmply = FieldValue<I2C1_SR1_RxNE_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -337,7 +337,7 @@ template <typename Reg, size_t offset, size_t size, typename AccessMode, typenam
 struct I2C1_SR2_BUSY_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
   using Value0 = FieldValue<I2C1_SR2_BUSY_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<I2C1_SR2_BUSY_Values, BaseType, 1U> ;
+  using Busy = FieldValue<I2C1_SR2_BUSY_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 

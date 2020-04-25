@@ -1,5 +1,4 @@
 #pragma once
-#include <cmath> //for USARTDIV
 #include "usart2registers.hpp" //for registers
 
 
@@ -24,8 +23,8 @@ public:
   
     static void On() 
     {
-    USARTModule::CR1::UE::Enable::Set() ; //????????? USART2
-    USARTModule::CR1::TE::Enable::Set() ; //????????? ????????
+    USARTModule::CR1::UE::Enable::Set() ; //включение USART2
+    USARTModule::CR1::TE::Enable::Set() ; //включение передачи
   }
   
     static void SendData (const char* ptr, size_t size) 

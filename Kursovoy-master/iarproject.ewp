@@ -2151,6 +2151,9 @@
             <name>$PROJ_DIR$\AHardware\Pinsconfig.hpp</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\AHardware\SMBus.hpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\AHardware\SPI.hpp</name>
         </file>
         <file>
@@ -2164,6 +2167,12 @@
         </file>
         <file>
             <name>$PROJ_DIR$\Application\ButtonTask.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\IUnits.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\Measuring.hpp</name>
         </file>
     </group>
     <group>

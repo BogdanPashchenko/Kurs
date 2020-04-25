@@ -14,6 +14,8 @@
 #include "usart2registers.hpp" //for usart2-registers
 #include "USART.hpp" //for setup USART
 #include "susudefs.hpp" //for SusuString
+#include "i2c1registers.hpp" //for i2c1
+#include "SMBus.hpp" //for SMBus (I2C1)
 
 //std::uint32_t SystemCoreClock = 16'000'000U;
 
@@ -45,6 +47,15 @@ int __low_level_init(void)
   USART2::CR1::PCE::ParityControlEnable::Set(); 
   USART2::CR1::PS::ParityEven::Set(); //chetnost' (chetnii)
   
+  //setup I2C1 (SmBus)
+  
+  I2C1::CR1::SMBUS::SmBusMode:: Set(); //Включение интерфейса SMBus.
+  I2C1::CR1::SMBTYPE::Host::Set(); //Тип устройства в режиме.
+  I2C1::CR1::ACK::Acknowledge::Set(); //Разрешение отправки.
+  I2C1::OAR1::ADDMODE:: Bits7::Set(); //7-разрядный режим адресации.
+  I2C1::OAR1::ADD7::Set(0x01U);
+  I2C1::CCR::F_S::FastMode::Set(); 
+  I2C1::CCR::DUTY::DutyCycles_2::Set();
   
   RCC::CR::HSION::On::Set();
   while (RCC::CR::HSIRDY::NotReady::IsSet())
@@ -59,24 +70,29 @@ int __low_level_init(void)
   }
 
   RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
-  
-  RCC::APB1ENR::SPI2EN::Enable::Set(); //SPI k istochiky taktirovaniya  
-  
+  RCC::APB1ENR::SPI2EN::Enable::Set(); //SPI k istochiky taktirovaniya 
+  RCC::APB1ENR::I2C1EN::Enable::Set(); //I2C1 к источнику тактирования
   RCC::APB1ENR::USART2EN::Enable::Set();//USART k istochiky taktirovaniya  
    
   RCC::AHB1ENR::GPIOAEN::Enable::Set(); //GPIOA k istochiky taktirovaniya  
   RCC::AHB1ENR::GPIOBEN::Enable::Set(); //GPIOA k istochiky taktirovaniya 
   RCC::AHB1ENR::GPIOCEN::Enable::Set(); //GPIOA k istochiky taktirovaniya 
   
+  //for Display
   GPIOB::MODER::MODER13::Alternate::Set(); //Alternate moder 13
   GPIOB::MODER::MODER15::Alternate::Set(); //Alternate moder 15
   GPIOB::AFRH::AFRH13::Af5::Set();  //clk
   GPIOB::AFRH::AFRH15::Af5::Set(); //din
   
-  //for USART
+  //for I2C1 or SMBus
+  GPIOB::MODER::MODER5::Alternate::Set(); //Alternate moder 5
+  GPIOB::MODER::MODER7::Alternate::Set(); //Alternate moder 7
+  GPIOB::AFRL::AFRL5::Af5::Set();  //sda
+  GPIOB::AFRL::AFRL7::Af5::Set();  //scl
   
+  //for USART 
   GPIOA::MODER::MODER2::Alternate::Set(); //Alternate moder 2
-  GPIOA::MODER::MODER3::Alternate::Set(); //?Alternate moder 3
+  GPIOA::MODER::MODER3::Alternate::Set(); //Alternate moder 3
   
   GPIOA::OTYPER::OT2::OutputPushPull::Set(); // output type setting dvyhtaktinii vixod(Output push-pull) 
   GPIOA::OTYPER::OT3::OutputPushPull::Set(); // output type setting dvyhtaktinii vixod(Output push-pull) 
@@ -95,7 +111,17 @@ ButtonTask myButtonTask(event);
 
 int main()
 {
+  GpioPort<GPIOB, 2U> SDAPort;
+  SDAPort.SetAlternate();
+  GpioPort<GPIOB, 3U> SCLPort;
+  SCLPort.SetAlternate();
   
+  SMBus<I2C1> SMBUS;
+  SMBUS.WriteByte(1);
+  
+  Spi<SPI2> spi;
+  spi.WriteByte(3);
+      
   USART<USART2, 16000000U> UsartConfig;
   UsartConfig.SetSamplingMode(SamplingMode::Mode8);
   UsartConfig.SetSpeed(Speed::Speed9600);
@@ -107,7 +133,7 @@ int main()
     for (auto i=0 ; i<10000000 ; i++) ;
   }
   
-  GpioPort<GPIOC,13> GPort;
+  GpioPort<GPIOC,11> GPort;
   GPort.SetAlternate();
 
   GpioPort<GPIOB, 1U> CSPort;
