@@ -7,22 +7,24 @@
 enum class ElinkDriverCommands
 {
 PanelSetting = 0x0,  
+PowerOff  = 0x02,
 PowerOn = 0x04,
 BoosterSoftStart = 0x06,
-DataStartTransmission1 = 0x10,
+DisplayStartTransmission1 = 0x10,
 DisplayRefresh = 0x12,
-DataStartTransmission2 = 0x13,
+DisplayStartTransmission2 = 0x13,
 VcomLut = 0x20,
 W2wLut = 0x21,
 B2wLut = 0x22,
 W2bLut = 0x23,
 B2bLut = 0x24,
+PLL  = 0x30,
 VcomDataIntervalSetting  = 0x50,
 VCMDCSetting  = 0x82,
 };
 
   static constexpr unsigned char EPD_4IN2_lut_vcom0[] = {  
-    0x00, 0x0E, 0x00, 0x00, 0x00, 0x01,
+    0x00, 0x0E, 0x00, 0x00, 0x00, 0x02,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -31,7 +33,7 @@ VCMDCSetting  = 0x82,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   };
   static constexpr unsigned char EPD_4IN2_lut_ww[] = {    //white white
-    0xA0, 0x0E, 0x00, 0x00, 0x00, 0x01,
+    0xA0, 0x0E, 0x00, 0x00, 0x00, 0x02,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -41,7 +43,7 @@ VCMDCSetting  = 0x82,
 };
 
 static constexpr unsigned char EPD_4IN2_lut_bw[] = {     //black white
-    0xA0, 0x0E, 0x00, 0x00, 0x00, 0x01,
+    0xA0, 0x0E, 0x00, 0x00, 0x00, 0x02,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -51,7 +53,7 @@ static constexpr unsigned char EPD_4IN2_lut_bw[] = {     //black white
 };
 
 static constexpr unsigned char EPD_4IN2_lut_wb[] = {  //white black
-    0x50, 0x0E, 0x00, 0x00, 0x00, 0x01,
+    0x50, 0x0E, 0x00, 0x00, 0x00, 0x02,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -61,7 +63,7 @@ static constexpr unsigned char EPD_4IN2_lut_wb[] = {  //white black
 };
 
 static constexpr unsigned char EPD_4IN2_lut_bb[] = {   //black black
-    0x50, 0x0E, 0x00, 0x00, 0x00, 0x01,
+    0x50, 0x0E, 0x00, 0x00, 0x00, 0x02,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -119,13 +121,21 @@ public:
     SendData(0x17);
     SendData(0x17);
     SendData(0x17); 
+    SendCommand(ElinkDriverCommands::PowerOff);
+    while(!busy.IsSet()) 
+    {
+      for (int i = 0; i< 100000; i++) {};  
+    }; 
     SendCommand(ElinkDriverCommands::PowerOn);
     while(!busy.IsSet()) 
     {
+      for (int i = 0; i< 100000; i++) {};
     }; 
     SendCommand(ElinkDriverCommands::PanelSetting);
     SendData(0x0F);
     SetLut();
+    SendCommand(ElinkDriverCommands::PLL); // PLL setting
+    SendData(0x3C); // 3A 100HZ   29 150Hz 39 200HZ	31 171HZ
     SendCommand (ElinkDriverCommands::VCMDCSetting);
     SendData(0x12); //Display Refresh(DRF)
     SendCommand (ElinkDriverCommands::VcomDataIntervalSetting);
@@ -133,15 +143,16 @@ public:
         
   void ClearDisplay ()
   {
-   SendCommand(ElinkDriverCommands::DataStartTransmission1); 
+   const std::uint8_t WhiteColor = 0xff;
+   SendCommand(ElinkDriverCommands::DisplayStartTransmission1); 
     for (int i = 0; i < W / 8 * H; i ++)
     {
-      SendData(0xFF); //0xFF = BlackColor
+      SendData(WhiteColor); 
     };
-    SendCommand(ElinkDriverCommands::DataStartTransmission2);
+    SendCommand(ElinkDriverCommands::DisplayStartTransmission2);
     for (int i = 0; i < W / 8 * H; i ++) 
     {
-      SendData(0xFF); //0xFF = BlackColor
+      SendData(WhiteColor); //0xFF = WhiteColor
     }
     Refresh();
   }
@@ -165,12 +176,16 @@ public:
   void Reset ()
   {
     rst.Set(); //set rst in 1
+    for (int i = 0; i < 1000000; i ++) {};
     rst.Reset(); //set rst in 0
+    for (int i = 0; i < 1000000; i ++) {};
     rst.Set(); //set rst in 1
+    for (int i = 0; i < 1000000; i ++) {};
   }
   
     void Refresh ()
   {
+    SetLut();
    SendCommand(ElinkDriverCommands::DisplayRefresh);
    while(busy.IsSet())
    {

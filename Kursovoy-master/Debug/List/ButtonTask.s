@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        25/Apr/2020  15:07:06
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        28/Apr/2020  20:52:09
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWB4F4.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EW6674.tmp
 //        (D:\POIP\Git_hub\Kurs\Kursovoy-master\Application\ButtonTask.cpp -lC
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -lA
 //        D:\POIP\Git_hub\Kurs\Kursovoy-master\Debug\List -o

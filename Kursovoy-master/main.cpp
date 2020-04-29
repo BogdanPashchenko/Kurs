@@ -20,7 +20,7 @@
 //std::uint32_t SystemCoreClock = 16'000'000U;
 
 using namespace std;
-constexpr SusuString message (" Hello World!") ;
+constexpr SusuStringView message (" Hello World!") ;
 
 extern "C" {
 int __low_level_init(void)
