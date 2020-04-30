@@ -2377,7 +2377,13 @@
             <name>$PROJ_DIR$\AHardware\DislpayDriver.hpp</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\AHardware\EInkDisplay.hpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\AHardware\GpioPort.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\AHardware\IDisplayDriver.hpp</name>
         </file>
         <file>
             <name>$PROJ_DIR$\AHardware\IGpio.hpp</name>

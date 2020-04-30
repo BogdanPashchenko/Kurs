@@ -11,6 +11,7 @@
 #include "spi2registers.hpp" //for setup SPI
 #include "SPI.hpp" //for Button
 #include "DislpayDriver.hpp" //for Display
+#include "EInkDisplay.hpp" //for EInkDisplay 
 #include "usart2registers.hpp" //for usart2-registers
 #include "USART.hpp" //for setup USART
 #include "susudefs.hpp" //for SusuString
@@ -152,6 +153,7 @@ int main()
   DisplayDriver<Spi<SPI2>> Display(CSPort,DCPort,RSTPort,BUSYPort); //,DINPort,CLKPort
   Display.Init();
   Display.ClearDisplay ();
+  
 
   using namespace OsWrapper;
   Rtos::CreateThread(myButtonTask,"Button", ThreadPriority::normal); //Button

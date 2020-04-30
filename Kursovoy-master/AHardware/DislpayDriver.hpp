@@ -192,6 +192,38 @@ public:
    };
   }
   
+    void Clear() 
+    {
+    const std::uint8_t WhiteColor = 0xff;
+    SendCommand(ElinkDriverCommands::DisplayStartTransmission1);
+    for (int i = 0; i < W / 8 * H; i ++) 
+    {
+      SendData(WhiteColor);
+    }
+    SendCommand(ElinkDriverCommands::DisplayStartTransmission2);
+    for (int i = 0; i < W / 8 * H; i ++) 
+    {
+      SendData(WhiteColor);
+    }    
+    Refresh();
+  }
+  
+  void Display(uint8_t *buff, size_t lenght) 
+  {
+    if (buff != nullptr) 
+    {
+      SendCommand(ElinkDriverCommands :: DisplayStartTransmission2); 
+      for (std::uint16_t j = 0; j < H; j++) 
+      {
+        for(std::uint16_t i = 0; i < W; i++) 
+        {
+        SendData(buff[i+j*W]);
+        }
+      } 
+    };
+    Refresh();
+  }
+  
    void SetLut() 
   {
     unsigned int i;
