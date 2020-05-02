@@ -4,6 +4,14 @@ template<typename SMBusModule>
 class SMBus
 {
 public:
+  static void Start ()
+  {
+
+  }
+  static void Stop ()
+  {
+
+  }
   static void WriteByte (uint8_t Byte)
   {
     while (SMBusModule::SR1::TxE::DataNotEmply::IsSet()) //TxE - shows reception is completed or not, priem
@@ -15,11 +23,12 @@ public:
     {
     }
   }
-  static uint8_t ReadByte ()
+  
+  static uint8_t ReadByte (uint8_t)
   {
-    while (!SMBusModule::SR1::RxNE::DataRegisterNotEmply::IsSet()) 
+    while (SMBusModule::SR1::RxNE::DataRegisterNotEmply::IsSet()) 
     {
     }
-    return SMBusModule::DR::Read ();
+    return SMBusModule::DR::Get();
   }
 };

@@ -117,8 +117,8 @@ int main()
   GpioPort<GPIOB, 3U> SCLPort;
   SCLPort.SetAlternate();
   
-  SMBus<I2C1> SMBUS;
-  SMBUS.WriteByte(1);
+  SMBus<I2C1> SMBUS; //как включить ???
+  SMBUS.ReadByte(1);
   
   Spi<SPI2> spi;
   spi.WriteByte(3);

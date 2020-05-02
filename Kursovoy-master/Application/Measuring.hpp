@@ -15,7 +15,7 @@ class Celsius:public IUnits
 public:
 float Conversation(float Value) override
 {
-return Value;
+return (Value*0.02F)-273.15F;
 }
 };
 class Kelvin:public IUnits
@@ -23,6 +23,6 @@ class Kelvin:public IUnits
 public:
 float Conversation(float Value) override
 {
-return Value+237.0F;
+return Value*0.02F;
 }
 };
