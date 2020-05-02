@@ -19,7 +19,7 @@ private:
   
    float Calculation(float Temper) override
   {
-    Value = k * Temper + b;
+    Value = (k * Temper + b)*0.02f;
   }
   
    const SusuStringView& GetName() const override

@@ -5,51 +5,11 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Application\Celsuis.hpp</file>
             <file>$PROJ_DIR$\AHardware\DislpayDriver.hpp</file>
             <file>$PROJ_DIR$\AHardware\EInkDisplay.hpp</file>
             <file>$PROJ_DIR$\AHardware\GpioPort.hpp</file>
             <file>$PROJ_DIR$\AHardware\IDisplayDriver.hpp</file>
-            <file>$PROJ_DIR$\Rtos\wrapper\rtos.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cstdint</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xxexception</file>
-            <file>$PROJ_DIR$\Debug\Obj\queue.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\Debug\List\main.lst</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cstdlib</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cwchar</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiobfieldvalues.hpp</file>
-            <file>$PROJ_DIR$\Rtos\wrapper\FreeRtos\rtosdefs.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\startupF411RE.xcl</file>
-            <file>$PROJ_DIR$\Debug\List\tasks.s</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\i2c1fieldvalues.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\croutine.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\semphr.h</file>
-            <file>$PROJ_DIR$\Debug\List\startupF411RE.s</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\Debug\List\croutine.lst</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\typeinfo</file>
-            <file>$TOOLKIT_DIR$\inc\c\locale.h</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\list.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\tasks.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\c\wchar.h</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp</file>
-            <file>$PROJ_DIR$\Debug\List\queue.lst</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xlocinfo</file>
-            <file>$PROJ_DIR$\Rtos\wrapper\thread.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\croutine.o</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\FreeRTOS.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\deprecated_definitions.h</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\system_error</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\utility</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Mlx90614\mlx90614.hpp</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Smbus\smbus.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\queue.h</file>
+            <file>$PROJ_DIR$\AHardware\IGpio.hpp</file>
             <file>$TOOLKIT_DIR$\inc\cpp\cmath</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\FreeRTOSConfig.h</file>
             <file>$TOOLKIT_DIR$\inc\c\errno.h</file>
@@ -89,7 +49,6 @@
             <file>$PROJ_DIR$\Debug\List\event_groups.s</file>
             <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\accessmode.hpp</file>
             <file>$TOOLKIT_DIR$\inc\cpp\xlocale</file>
-            <file>$PROJ_DIR$\..\..\..\..\Kolody\Infrared-Temperature-Sensor\Src\smbus.c</file>
             <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
             <file>$PROJ_DIR$\Debug\Obj\iarproject.pbd</file>
             <file>$TOOLKIT_DIR$\inc\cpp\iterator</file>
@@ -161,32 +120,7 @@
             <file>$TOOLKIT_DIR$\inc\c\xatomic.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
             <file>$TOOLKIT_DIR$\inc\cpp\ostream</file>
-            <file>$PROJ_DIR$\..\..\..\..\Kolody\Infrared-Temperature-Sensor\Src\mlx90614.c</file>
-            <file>$PROJ_DIR$\..\..\..\..\Kolody\Infrared-Temperature-Sensor\Inc\mlx90614.h</file>
-            <file>$PROJ_DIR$\AHardware\IGpio.hpp</file>
-            <file>$PROJ_DIR$\AHardware\Pinsconfig.hpp</file>
-            <file>$PROJ_DIR$\AHardware\SMBus.hpp</file>
-            <file>$PROJ_DIR$\AHardware\SPI.hpp</file>
-            <file>$PROJ_DIR$\AHardware\USART.hpp</file>
-            <file>$PROJ_DIR$\Application\Button.hpp</file>
-            <file>$PROJ_DIR$\Application\ButtonTask.hpp</file>
             <file>$PROJ_DIR$\Application\IUnits.hpp</file>
-            <file>$PROJ_DIR$\Application\Measuring.hpp</file>
-            <file>$PROJ_DIR$\AHardware\TemperatureSensor.hpp</file>
-            <file>$PROJ_DIR$\Application\ButtonTask.cpp</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\Common\mpu_wrappers.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\port.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portasm.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portasm.s</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\MemMang\heap_1.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\croutine.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\event_groups.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\list.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\queue.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\tasks.c</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\timers.c</file>
-            <file>$PROJ_DIR$\main.cpp</file>
-            <file>$PROJ_DIR$\startupF411RE.cpp</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portmacro.h</file>
             <file>$TOOLKIT_DIR$\inc\c\time.h</file>
             <file>$TOOLKIT_DIR$\inc\cpp\limits</file>
@@ -226,29 +160,76 @@
             <file>$PROJ_DIR$\Debug\Obj\portasm.o</file>
             <file>$PROJ_DIR$\Debug\List\startupF411RE.lst</file>
             <file>$TOOLKIT_DIR$\inc\c\time32.h</file>
-            <file>$PROJ_DIR$\..\CortexLib\main.cpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR16.024\Kursovoi-master\Kursovoy-master\Application\Kelvin.hpp</file>
             <file>$PROJ_DIR$\Application\Fahrenheit.hpp</file>
             <file>$PROJ_DIR$\Application\Kelvin.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR59.248\Kursovoi-master\Kursovoy-master\Application\IVariable.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR18.544\Kursovoi-master\Kursovoy-master\Application\IUnits.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR16.024\Kursovoi-master\Kursovoy-master\Application\Celsius.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR16.024\Kursovoi-master\Kursovoy-master\Application\Fahrenheit.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR03.656\Kursovoi-master\Kursovoy-master\Application\Kelvin.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR56.136\Kursovoi-master\Kursovoy-master\Application\IUnits.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR09.136\Kursovoi-master\Kursovoy-master\Application\IVariable.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR32.544\Kursovoi-master\Kursovoy-master\Application\Перевод из C-K-F.hpp</file>
-            <file>C:\Users\User\AppData\Local\Temp\Rar$DR09.248\Kursovoi-master\Kursovoy-master\Application\IUnits.hpp</file>
-            <file>$PROJ_DIR$\Application\Filter.hpp</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Adc\hardwareadc.hpp</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Smbus\Stm32F4xx\STM32F411\hardwaresmbus.hpp</file>
+            <file>$PROJ_DIR$\AHardware\Pinsconfig.hpp</file>
+            <file>$PROJ_DIR$\AHardware\SMBus.hpp</file>
+            <file>$PROJ_DIR$\AHardware\SPI.hpp</file>
+            <file>$PROJ_DIR$\AHardware\USART.hpp</file>
+            <file>$PROJ_DIR$\Application\Button.hpp</file>
+            <file>$PROJ_DIR$\Application\ButtonTask.hpp</file>
+            <file>$PROJ_DIR$\Application\Measuring.hpp</file>
+            <file>$PROJ_DIR$\AHardware\TemperatureSensor.hpp</file>
+            <file>$PROJ_DIR$\Application\ButtonTask.cpp</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\port.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portasm.s</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\croutine.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\event_groups.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\list.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\queue.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\tasks.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\timers.c</file>
+            <file>$PROJ_DIR$\main.cpp</file>
+            <file>$PROJ_DIR$\startupF411RE.cpp</file>
+            <file>$PROJ_DIR$\Application\Celsuis.hpp</file>
+            <file>$PROJ_DIR$\Rtos\wrapper\rtos.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cstdint</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xxexception</file>
+            <file>$PROJ_DIR$\Debug\Obj\queue.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\List\main.lst</file>
+            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\usart2fieldvalues.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cstdlib</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cwchar</file>
+            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiobfieldvalues.hpp</file>
+            <file>$PROJ_DIR$\Rtos\wrapper\FreeRtos\rtosdefs.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\startupF411RE.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\tasks.s</file>
+            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\i2c1fieldvalues.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\croutine.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\semphr.h</file>
+            <file>$PROJ_DIR$\Debug\List\startupF411RE.s</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\List\croutine.lst</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\typeinfo</file>
+            <file>$TOOLKIT_DIR$\inc\c\locale.h</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\list.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\tasks.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\wchar.h</file>
+            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp</file>
+            <file>$PROJ_DIR$\Debug\List\queue.lst</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xlocinfo</file>
+            <file>$PROJ_DIR$\Rtos\wrapper\thread.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\croutine.o</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\FreeRTOS.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\deprecated_definitions.h</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\system_error</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\utility</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\queue.h</file>
+            <file>C:\Users\User\AppData\Local\Temp\Rar$DR18.081\Kursovoi-master\Kursovoy-master\Application\Fahrenheit.hpp</file>
+            <file>C:\Users\User\AppData\Local\Temp\Rar$DR18.080\Kursovoi-master\Kursovoy-master\Application\IUnits.hpp</file>
+            <file>C:\Users\User\AppData\Local\Temp\Rar$DR87.080\Kursovoi-master\Kursovoy-master\Application\Celsius.hpp</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 69 149 94</file>
+                    <file> 29 108 53</file>
                 </tool>
             </outputs>
         </file>
@@ -257,13 +238,13 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 149 94</file>
+                    <file> 108 53</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 190 56 35 95 188 9 50 218 8 148 103 199 147 91 140 152 85</file>
+                    <file> 124 16 207 54 122 181 10 152 180 107 62 133 106 50 99 111 44</file>
                 </tool>
             </inputs>
         </file>
@@ -272,11 +253,24 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 108</file>
+                    <file> 67</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 107</file>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MyTask\ButtonTask.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 16</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 18</file>
                 </tool>
             </outputs>
         </file>
@@ -285,21 +279,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 59 111 56</file>
+                    <file> 19 70 16</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 57</file>
+                    <file> 17</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 58</file>
+                    <file> 18</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 164 34 52 62 133 116 6 76 120 146 189 24 137 12 67 138 51 184 99 123 214 71 45 124 154 92 143 13 30 217 110 88 100 54 63 7 201 93 40 89 117 125 102 43 19 153 87 131 155 79 203 193 122 83 132 27 68 121 53 75 66 72 26 33 109 37 196 183 220 39 136 47 150 15 36 46 208 101 38 182 112 119 115 202 200 28 22 44 90 205 126 78 130 61 104 73 3 158 139 31 129 187 82 128 191 98 192 60 209 195 163 159</file>
+                    <file> 162 206 12 22 92 75 178 36 79 105 123 196 96 184 27 97 11 118 58 82 148 31 5 83 113 51 102 185 202 151 69 47 59 14 23 179 135 52 212 48 76 84 61 213 191 112 46 90 114 39 137 127 81 43 91 199 28 80 13 35 26 32 198 205 68 209 130 117 154 211 95 7 109 187 208 6 142 60 210 116 71 78 74 136 134 200 194 214 49 139 85 38 89 21 63 33 2 4 98 203 88 121 42 87 125 57 126 20 143 129 161 157</file>
                 </tool>
             </inputs>
         </file>
@@ -308,21 +302,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 185 77 50</file>
+                    <file> 119 37 10</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 118</file>
+                    <file> 77</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 210</file>
+                    <file> 144</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 112 119 146 189 24 137 115 36 88 120 138 76 46 208 101 38 182 202 200 28</file>
+                    <file> 71 78 105 123 196 96 74 208 47 79 97 36 6 142 60 210 116 136 134 200</file>
                 </tool>
             </inputs>
         </file>
@@ -331,13 +325,13 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 218</file>
+                    <file> 152</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 46</file>
+                    <file> 6</file>
                 </tool>
             </inputs>
         </file>
@@ -346,21 +340,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 74 25 35</file>
+                    <file> 34 197 207</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 142</file>
+                    <file> 101</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 20</file>
+                    <file> 192</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 36 88 120 146 189 24 137 138 76 46 208 101 38 182 112 119 115 202 200 28 113</file>
+                    <file> 208 47 79 105 123 196 96 97 36 6 142 60 210 116 71 78 74 136 134 200 72</file>
                 </tool>
             </inputs>
         </file>
@@ -369,21 +363,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 81 49 95</file>
+                    <file> 41 9 54</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 206</file>
+                    <file> 140</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 215</file>
+                    <file> 149</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 67 120 146 189 24 137 138 51 36 88 76 46 208 101 38 182 112 119 115 202 200 28 90 205</file>
+                    <file> 27 79 105 123 196 96 97 11 208 47 36 6 142 60 210 116 71 78 74 136 134 200 49 139</file>
                 </tool>
             </inputs>
         </file>
@@ -392,21 +386,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 144 55 188</file>
+                    <file> 103 15 122</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 213</file>
+                    <file> 147</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 80</file>
+                    <file> 40</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 67 120 146 189 24 137 138 51 36 88 76 46 208 101 38 182 112 119 115 202 28</file>
+                    <file> 27 79 105 123 196 96 97 11 208 47 36 6 142 60 210 116 71 78 74 136 200</file>
                 </tool>
             </inputs>
         </file>
@@ -415,21 +409,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 211 32 8</file>
+                    <file> 145 204 180</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 145</file>
+                    <file> 104</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 186</file>
+                    <file> 120</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 67 120 146 189 24 137 138 51 43 19 36 88 76 46 208 101 38 182 112 119 115 202 200 28 44</file>
+                    <file> 27 79 105 123 196 96 97 11 213 191 208 47 36 6 142 60 210 116 71 78 74 136 134 200 214</file>
                 </tool>
             </inputs>
         </file>
@@ -438,21 +432,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 17 197 103</file>
+                    <file> 189 131 62</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 204</file>
+                    <file> 138</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 29</file>
+                    <file> 201</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 67 120 146 189 24 137 138 51 43 19 36 88 76 46 208 101 38 182 112 119 115 202 200 28 90 70</file>
+                    <file> 27 79 105 123 196 96 97 11 213 191 208 47 36 6 142 60 210 116 71 78 74 136 134 200 49 30</file>
                 </tool>
             </inputs>
         </file>
@@ -461,21 +455,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 114 141 199</file>
+                    <file> 73 100 133</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 127</file>
+                    <file> 86</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 96</file>
+                    <file> 55</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 67 120 146 189 24 137 138 51 36 88 76 46 208 101 38 182 112 119 115 202 200 28 44 90</file>
+                    <file> 27 79 105 123 196 96 97 11 208 47 36 6 142 60 210 116 71 78 74 136 134 200 214 49</file>
                 </tool>
             </inputs>
         </file>
@@ -484,21 +478,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 97 10 9</file>
+                    <file> 56 182 181</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 21</file>
+                    <file> 193</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 64</file>
+                    <file> 24</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 5 34 52 62 133 116 6 76 120 146 189 24 137 12 67 138 51 184 99 123 214 71 45 124 154 92 143 13 30 217 110 88 100 54 63 7 201 93 40 89 117 125 102 43 19 153 87 131 155 79 203 193 122 83 132 27 68 121 53 75 66 72 26 33 109 37 196 183 220 39 136 47 150 15 36 46 208 101 38 182 112 119 115 202 200 28 22 44 90 205 126 78 130 61 104 73 194 212 129 187 82 128 191 98 192 60 209 195 3 158 163 164 139 31 159 105 216 48 14 134 135 161 1 2 4 198 11 162 151 18 160</file>
+                    <file> 177 206 12 22 92 75 178 36 79 105 123 196 96 184 27 97 11 118 58 82 148 31 5 83 113 51 102 185 202 151 69 47 59 14 23 179 135 52 212 48 76 84 61 213 191 112 46 90 114 39 137 127 81 43 91 199 28 80 13 35 26 32 198 205 68 209 130 117 154 211 95 7 109 187 208 6 142 60 210 116 71 78 74 136 134 200 194 214 49 139 85 38 89 21 63 33 128 146 88 121 42 87 125 57 126 20 143 129 2 4 161 162 98 203 157 64 150 8 186 93 94 159 0 1 3 132 183 160 110 190 158</file>
                 </tool>
             </inputs>
         </file>
@@ -507,36 +501,23 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 23 219 148</file>
+                    <file> 195 153 107</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 65</file>
+                    <file> 25</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 16</file>
+                    <file> 188</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 5 34 52 62 133 116 6 76 120 146 189 24 137 12 67 138 51 184 99 123 214 71 45 124 154 92 143 13 30 217 110 88 100 54 63 7 201 93 40 89 117 125 102 43 19 153 87 131 155 79 203 193 122 83 132 27 68 121 53 75 66 72 26 33 109 37 196 183 220 39 136 47 150 15 36 46 208 101 38 182 112 119 115 202 200 28 22 44 90 205 126 78 130 61 104</file>
+                    <file> 177 206 12 22 92 75 178 36 79 105 123 196 96 184 27 97 11 118 58 82 148 31 5 83 113 51 102 185 202 151 69 47 59 14 23 179 135 52 212 48 76 84 61 213 191 112 46 90 114 39 137 127 81 43 91 199 28 80 13 35 26 32 198 205 68 209 130 117 154 211 95 7 109 187 208 6 142 60 210 116 71 78 74 136 134 200 194 214 49 139 85 38 89 21 63</file>
                 </tool>
             </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\MyTask\ButtonTask.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 56</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 58</file>
-                </tool>
-            </outputs>
         </file>
         <forcedrebuild>
             <name>$PROJ_DIR$\Rtos\FreeRtos\portable\Common\mpu_wrappers.c</name>
@@ -549,10 +530,6 @@
         <forcedrebuild>
             <name>$PROJ_DIR$\Rtos\FreeRtos\portable\MemMang\heap_1.c</name>
             <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>[MULTI_TOOL]</name>
-            <tool>ILINK</tool>
         </forcedrebuild>
     </configuration>
     <configuration>
