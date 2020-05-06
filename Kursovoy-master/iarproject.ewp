@@ -2175,10 +2175,28 @@
             <name>$PROJ_DIR$\Application\ButtonTask.hpp</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\Application\Celsuis.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\Fahrenheit.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\Filter.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\IUnits.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\Kelvin.hpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\Application\Measuring.hpp</name>
         </file>
         <file>
             <name>$PROJ_DIR$\AHardware\TemperatureSensor.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\Temperautre.hpp</name>
         </file>
     </group>
     <group>

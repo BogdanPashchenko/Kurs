@@ -8,18 +8,12 @@ class Fahrenheit : public IUnits
 private:
   const float k = 9/5;
   const float b = 32.0F;
-  float Value = 0.0F;
   static constexpr SusuStringView Name = SusuStringView("Fahrenheit");
 public:
   
-  float GetValue()
+    void Calculation(float Value)
   {
-    return Value;
-  }
-  
-    void Calculation(float Temper)
-  {
-    Value = k * Temper + b;
+    TemperatureFahrenheit = k * Value + b;
   }
   
   const SusuStringView& GetName() const override

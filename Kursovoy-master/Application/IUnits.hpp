@@ -10,7 +10,7 @@ public:
   {
     return Value;
   }
-  virtual void Calculation(float Temper) = 0;
+  virtual void Calculation(float Value) const = 0;
   
   virtual const SusuStringView& GetName() const = 0;
 };

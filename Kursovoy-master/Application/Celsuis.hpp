@@ -6,23 +6,17 @@ class Celsius : public IUnits
 {
 private: 
   const float k = 1.0F;
-  const float b = 0.0F;
-  float Value = 0.0F;
+  const float b = -273.15F;
   static constexpr SusuStringView Name = SusuStringView("Celsius");
 
 public:
-  
-  float GetValue()
+    
+   float Calculation(float Value) 
   {
-    return Value;
+    TemperatureCelsuis = (k * Value + b)*0.02f ;
   }
   
-   void Calculation(float Temper) override
-  {
-    Value = (k * Temper + b)*0.02f - 273.15f;
-  }
-  
-   const SusuStringView& GetName() const override
+   const SusuStringView& GetName()
   {
     return Name;
   }

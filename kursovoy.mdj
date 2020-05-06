@@ -2668,6 +2668,23 @@
 											"height": 13,
 											"text": "+Attribute1",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFx6TvqXQV6ui8=",
+											"_parent": {
+												"$ref": "AAAAAAFw7jyWUEf86vk="
+											},
+											"model": {
+												"$ref": "AAAAAAFx1LsvxxH57dY="
+											},
+											"font": "Arial;13;0",
+											"left": 381,
+											"top": 578,
+											"width": 104.40625,
+											"height": 13,
+											"text": "+Port1",
+											"horizontalAlignment": 0
 										}
 									],
 									"visible": false,
@@ -2675,7 +2692,7 @@
 									"left": 376,
 									"top": 513,
 									"width": 114.40625,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -2699,9 +2716,9 @@
 											"font": "Arial;13;2",
 											"left": 381,
 											"top": 586,
-											"width": 111.63623046875,
+											"width": 208.837890625,
 											"height": 13,
-											"text": "+GetName(): float",
+											"text": "+GetName(): SusuStringView& {query}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2716,9 +2733,26 @@
 											"font": "Arial;13;2",
 											"left": 381,
 											"top": 601,
-											"width": 111.63623046875,
+											"width": 208.837890625,
 											"height": 13,
-											"text": "+Calculation(): void",
+											"text": "+Calculation(): void {query}",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFx6TvqYAV9aZk=",
+											"_parent": {
+												"$ref": "AAAAAAFw7jyWUEf9GUE="
+											},
+											"model": {
+												"$ref": "AAAAAAFx1LtIlBKosTo="
+											},
+											"font": "Arial;13;2",
+											"left": 381,
+											"top": 616,
+											"width": 208.837890625,
+											"height": 13,
+											"text": "+GetValue(): float {query}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2726,8 +2760,8 @@
 									"font": "Arial;13;0",
 									"left": 376,
 									"top": 581,
-									"width": 121.63623046875,
-									"height": 38
+									"width": 218.837890625,
+									"height": 53
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -6173,18 +6207,18 @@
 												"$ref": "AAAAAAFxOx7ETPIJJcg="
 											},
 											"font": "Arial;13;0",
-											"left": 1018,
+											"left": 1022.18310546875,
 											"top": 357,
-											"width": 86.46142578125,
+											"width": 82.2783203125,
 											"height": 13,
 											"text": "USARTModule",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 1013,
+									"left": 1017.18310546875,
 									"top": 352,
-									"width": 96.46142578125,
+									"width": 92.2783203125,
 									"height": 23
 								}
 							],
@@ -6643,18 +6677,18 @@
 												"$ref": "AAAAAAFxNb6s8eh0PAE="
 											},
 											"font": "Arial;13;0",
-											"left": 1346,
+											"left": 1350.36083984375,
 											"top": 381,
-											"width": 63.5908203125,
+											"width": 59.22998046875,
 											"height": 13,
 											"text": "SPIModule",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 1341,
+									"left": 1345.36083984375,
 									"top": 376,
-									"width": 73.5908203125,
+									"width": 69.22998046875,
 									"height": 23
 								}
 							],
@@ -9863,9 +9897,9 @@
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 686,
-											"width": 167.02587890625,
+											"width": 200.890625,
 											"height": 13,
-											"text": "-k1: float",
+											"text": "-k1: float {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -9880,9 +9914,9 @@
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 701,
-											"width": 167.02587890625,
+											"width": 200.890625,
 											"height": 13,
-											"text": "-b1: float",
+											"text": "-b1: float {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -9897,7 +9931,7 @@
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 716,
-											"width": 167.02587890625,
+											"width": 200.890625,
 											"height": 13,
 											"text": "-value: float",
 											"horizontalAlignment": 0
@@ -9914,9 +9948,9 @@
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 731,
-											"width": 167.02587890625,
+											"width": 200.890625,
 											"height": 13,
-											"text": "-SusuStringView Name",
+											"text": "-Name: SusuStringView& {readOnly}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -9924,7 +9958,7 @@
 									"font": "Arial;13;0",
 									"left": 288,
 									"top": 681,
-									"width": 177.02587890625,
+									"width": 210.890625,
 									"height": 68
 								},
 								{
@@ -9949,9 +9983,9 @@
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 686,
-											"width": 167.02587890625,
+											"width": 202.439453125,
 											"height": 13,
-											"text": "+Calculation(): void",
+											"text": "+Calculation(value): float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -9966,9 +10000,9 @@
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 701,
-											"width": 167.02587890625,
+											"width": 202.439453125,
 											"height": 13,
-											"text": "+SusuStringView GetName()",
+											"text": "+GetName(): SusuStringView {query}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -9976,7 +10010,7 @@
 									"font": "Arial;13;0",
 									"left": 288,
 									"top": 681,
-									"width": 177.02587890625,
+									"width": 212.439453125,
 									"height": 38
 								},
 								{
@@ -10151,7 +10185,7 @@
 											"top": 686,
 											"width": 366.056640625,
 											"height": 13,
-											"text": "-k1: float",
+											"text": "-k1: float {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10168,7 +10202,7 @@
 											"top": 701,
 											"width": 366.056640625,
 											"height": 13,
-											"text": "-b1: float",
+											"text": "-b1: float {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10202,7 +10236,7 @@
 											"top": 731,
 											"width": 366.056640625,
 											"height": 13,
-											"text": "-SusuStringView Name = SusuStringView(\"Celsius\") {readOnly}",
+											"text": "-Name: SusuStringView& {readOnly}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -10237,7 +10271,7 @@
 											"top": 686,
 											"width": 205.31494140625,
 											"height": 13,
-											"text": "+Calculation(): void",
+											"text": "+Calculation(value): float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10254,7 +10288,7 @@
 											"top": 701,
 											"width": 205.31494140625,
 											"height": 13,
-											"text": "+SusuStringView Name GetName()",
+											"text": "+GetName(): SusuStringView {query}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10990,9 +11024,9 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 686,
-											"width": 170.6376953125,
+											"width": 200.890625,
 											"height": 13,
-											"text": "-k1: float",
+											"text": "-k1: float {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11007,9 +11041,9 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 701,
-											"width": 170.6376953125,
+											"width": 200.890625,
 											"height": 13,
-											"text": "-b1: float",
+											"text": "-b1: float {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11024,7 +11058,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 716,
-											"width": 170.6376953125,
+											"width": 200.890625,
 											"height": 13,
 											"text": "-value: float",
 											"horizontalAlignment": 0
@@ -11041,7 +11075,7 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 731,
-											"width": 170.6376953125,
+											"width": 200.890625,
 											"height": 13,
 											"text": "-value: float",
 											"horizontalAlignment": 0
@@ -11058,9 +11092,9 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 746,
-											"width": 170.6376953125,
+											"width": 200.890625,
 											"height": 13,
-											"text": "-SusuStringView Name",
+											"text": "-Name: SusuStringView& {readOnly}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -11068,7 +11102,7 @@
 									"font": "Arial;13;0",
 									"left": 432,
 									"top": 681,
-									"width": 180.6376953125,
+									"width": 210.890625,
 									"height": 83
 								},
 								{
@@ -11093,9 +11127,9 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 769,
-											"width": 170.6376953125,
+											"width": 202.439453125,
 											"height": 13,
-											"text": "+Calculation(): void",
+											"text": "+Calculation(value): float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11110,9 +11144,9 @@
 											"font": "Arial;13;0",
 											"left": 437,
 											"top": 784,
-											"width": 170.6376953125,
+											"width": 202.439453125,
 											"height": 13,
-											"text": "+SusuStringView  GetName()",
+											"text": "+GetName(): SusuStringView {query}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -11120,7 +11154,7 @@
 									"font": "Arial;13;0",
 									"left": 432,
 									"top": 764,
-									"width": 180.6376953125,
+									"width": 212.439453125,
 									"height": 38
 								},
 								{
@@ -15872,18 +15906,18 @@
 												"$ref": "AAAAAAFx084GbzoIgV8="
 											},
 											"font": "Arial;13;0",
-											"left": 360.92431640625,
+											"left": 363.80615234375,
 											"top": 461,
-											"width": 41.90087890625,
+											"width": 39.01904296875,
 											"height": 13,
 											"text": "SMBus",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 355.92431640625,
+									"left": 358.80615234375,
 									"top": 456,
-									"width": 51.90087890625,
+									"width": 49.01904296875,
 									"height": 23
 								}
 							],

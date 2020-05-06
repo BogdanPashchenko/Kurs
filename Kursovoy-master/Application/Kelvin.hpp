@@ -6,20 +6,14 @@ class Kelvin : public IUnits
 {
 private:
   const float k = 1.0F;
-  const float b = -273.0F;
-  float Value = 0.0F;
+  const float b = 0.0F;
   static constexpr SusuStringView Name = SusuStringView("Kelvin");
   
   public:
   
-  float GetValue()
+   float Calculation(float Value) override
   {
-    return Value;
-  }
-  
-   float Calculation(float Temper) override
-  {
-    Value = (k * Temper + b)*0.02f;
+    TemperatureKelvin = (k * Value + b)*0.02f;
   }
   
    const SusuStringView& GetName() const override
