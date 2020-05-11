@@ -16,7 +16,7 @@ public:
     TemperatureCelsuis = (k * Value + b)*0.02f ;
   }
   
-   const SusuStringView& GetName()
+   const SusuStringView& GetName() const override
   {
     return Name;
   }

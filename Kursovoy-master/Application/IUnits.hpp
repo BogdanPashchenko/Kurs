@@ -1,5 +1,8 @@
 #pragma once
 #include "susudefs.hpp"
+#include "Kelvin.hpp"
+#include "Celsuis.hpp"
+#include "Fahrenheit.hpp"
 
 class IUnits
 {

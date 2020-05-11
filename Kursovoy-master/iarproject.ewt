@@ -2428,10 +2428,13 @@
             <name>$PROJ_DIR$\Application\Measuring.hpp</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\AHardware\TemperatureSensor.hpp</name>
+            <name>$PROJ_DIR$\Application\TemperatureDirector.hpp</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\Application\Temperautre.hpp</name>
+            <name>$PROJ_DIR$\Application\TemperatureSensor.hpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Application\TemperatureTask.hpp</name>
         </file>
     </group>
     <group>

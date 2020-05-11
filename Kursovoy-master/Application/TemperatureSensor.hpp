@@ -1,8 +1,5 @@
 #pragma once
-
-#include "IGpio.hpp" // for Port's
-#include "GpioPort.hpp" // for Port's
-#iclude "SMBus.hpp" //for SMBus-interface
+#include "SMBus.hpp"
 
 
 template<typename SMBUS> 
@@ -13,30 +10,29 @@ private:
   
     static constexpr uint8_t Ram = 0x00U;
     static constexpr uint8_t ObjectTemperature = 0x07U;
-    void WriteByte (uint_8t Byte) ;
-    uint8_t ReadByte(uint8_t Byte);
+    static constexpr uint8_t ReadByte = 0x01U;
+    void WriteByte (uint8_t Byte)
+    {
+        SMBUS::WriteByte(Byte);
+    };
+    uint16_t ReadWord()
+    { 
+      uint16_t result = 0U;
+      SMBUS::WriteByte(ReadByte); //
+      result = SMBUS::ReadByte(); //прочтение
+      result |= SMBUS::ReadByte() << 8U; //команда на запись   
+      return result;
+    } ;
     
 public:
   
   float GetTemperautre()
     {
-  float temperature = 0.0f;
-  SMBUS:Start(); //Начало измерения 
-  SMBUS:WriteByte(Ram | ObjectTemperature); //Команда записи и чтения температуры объекта
-  SMBUS:WriteByte(ReadByte); //
-  SMBUS:ReadByte(); //прочтение
-  SMBUS::ReadByte() << 8U; //команда на запись 
-  SMBUS:Stop();
-    }
-  
-  void WriteByte (uint8_t Byte)
-    {
-    SMBUS:WriteByte(Byte);
-    }
-  
-  uint8_t ReadByte (uint8_t Byte)
-    {
-    SMBUS:ReadByte(Byte);
+      SMBUS::Start(); //Начало измерения 
+      SMBUS::WriteByte(Ram | ObjectTemperature); //Команда записи и чтения температуры объекта
+      float result = static_cast<float>(ReadWord());
+      SMBUS::Stop();
+      return result;
     }
   };
     

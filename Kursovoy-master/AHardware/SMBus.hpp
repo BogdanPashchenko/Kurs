@@ -24,7 +24,7 @@ public:
     }
   }
   
-  static uint8_t ReadByte (uint8_t)
+  static uint8_t ReadByte ()
   {
     while (SMBusModule::SR1::RxNE::DataRegisterNotEmply::IsSet()) 
     {

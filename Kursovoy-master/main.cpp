@@ -17,6 +17,9 @@
 #include "susudefs.hpp" //for SusuString
 #include "i2c1registers.hpp" //for i2c1
 #include "SMBus.hpp" //for SMBus (I2C1)
+#include "TemperatureSensor.hpp" //for MLX90614 (Sensor)
+#include "Filter.hpp" //for Filter
+#include <iostream> //for Filter
 
 //std::uint32_t SystemCoreClock = 16'000'000U;
 
@@ -109,6 +112,7 @@ int __low_level_init(void)
 OsWrapper::Event event{500ms, 1}; //FIXME Чисто для примера
 ButtonTask myButtonTask(event);
 //MyTask myTask(event, UserButton::GetInstance()); //FIXME Чисто для примера
+using SMBUS = SMBus<I2C1>;
 
 int main()
 {
@@ -116,21 +120,25 @@ int main()
   SDAPort.SetAlternate();
   GpioPort<GPIOB, 3U> SCLPort;
   SCLPort.SetAlternate();
+      
+   //std::cout << "Count: " << resultFilt << std::endl ; Для вывода значений отфильтрованных
   
-  SMBus<I2C1> SMBUS; //как включить ???
-  SMBUS.ReadByte(1);
+  TemperatureSensor<SMBUS> TempSens;
+  TempSens.GetTemperautre();
+  
+  SMBUS::WriteByte(1);
   
   Spi<SPI2> spi;
   spi.WriteByte(3);
-      
-  USART<USART2, 16000000U> UsartConfig;
-  UsartConfig.SetSamplingMode(SamplingMode::Mode8);
-  UsartConfig.SetSpeed(Speed::Speed9600);
+          
+  using UsartConfig = USART<USART2, 16000000U>;
+  UsartConfig::SetSamplingMode(SamplingMode::Mode8);
+  UsartConfig::SetSpeed(Speed::Speed9600);
   
-  UsartConfig.On(); 
+  UsartConfig::On(); 
   for (;;) 
   {
-    UsartConfig.SendData(message.str, message.size) ;
+    UsartConfig::SendData(message.str, message.size) ;
     for (auto i=0 ; i<10000000 ; i++) ;
   }
   

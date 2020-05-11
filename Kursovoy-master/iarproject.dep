@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>1853907779</fileChecksum>
+    <fileChecksum>1468595403</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\AHardware\DislpayDriver.hpp</file>
             <file>$PROJ_DIR$\AHardware\EInkDisplay.hpp</file>
             <file>$PROJ_DIR$\AHardware\GpioPort.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xstring</file>
+            <file>$PROJ_DIR$\Rtos\wrapper\event.hpp</file>
+            <file>$PROJ_DIR$\Debug\List\croutine.s</file>
+            <file>$TOOLKIT_DIR$\inc\c\wctype.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\List\port.lst</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\chrono</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\ios</file>
+            <file>$PROJ_DIR$\Debug\Obj\TemperatureTask.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\TemperatureTask.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\list.xcl</file>
-            <file>$PROJ_DIR$\Debug\List\event_groups.s</file>
-            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\accessmode.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xlocale</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\iarproject.pbd</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\iterator</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\iosfwd</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\timers.h</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xutility</file>
-            <file>$PROJ_DIR$\Debug\List\iarproject.log</file>
-            <file>$PROJ_DIR$\Debug\Obj\event_groups.o</file>
+            <file>$PROJ_DIR$\Debug\List\TemperatureTask.lst</file>
+            <file>$PROJ_DIR$\Debug\List\TemperatureTask.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\TemperatureTask.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\timers.xcl</file>
-            <file>$PROJ_DIR$\Debug\List\main.s</file>
             <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
             <file>$TOOLKIT_DIR$\inc\cpp\cfloat</file>
             <file>$TOOLKIT_DIR$\inc\cpp\initializer_list</file>
@@ -33,21 +31,6 @@
             <file>$PROJ_DIR$\Debug\Obj\tasks.o</file>
             <file>$PROJ_DIR$\Rtos\wrapper\eventmode.hpp</file>
             <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\gpioaregisters.hpp</file>
-            <file>$PROJ_DIR$\AHardware\SMBus.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\SMBus.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\SMBus.o</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cctype</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cstddef</file>
-            <file>$PROJ_DIR$\Debug\List\ButtonTask.lst</file>
-            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\croutine.h</file>
-            <file>$PROJ_DIR$\Debug\List\timers.s</file>
-            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xmemory0</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cstdio</file>
-            <file>$PROJ_DIR$\Debug\Obj\port.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
             <file>$TOOLKIT_DIR$\inc\c\xlocale_lconv.h</file>
             <file>$TOOLKIT_DIR$\inc\cpp\xiosbase</file>
             <file>$TOOLKIT_DIR$\inc\c\float.h</file>
@@ -178,7 +161,31 @@
             <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\registerbase.hpp</file>
             <file>$PROJ_DIR$\Rtos\wrapper\FreeRtos\rtoswrapper.hpp</file>
             <file>$TOOLKIT_DIR$\inc\cpp\algorithm</file>
+            <file>$PROJ_DIR$\Debug\List\event_groups.s</file>
+            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\accessmode.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xlocale</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\iarproject.pbd</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\iterator</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\iosfwd</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\timers.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xutility</file>
+            <file>$PROJ_DIR$\Debug\List\iarproject.log</file>
+            <file>$PROJ_DIR$\Debug\Obj\event_groups.o</file>
+            <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Mlx90614\mlx90614.hpp</file>
+            <file>$PROJ_DIR$\MyTask\TemperatureTask.cpp</file>
             <file>$TOOLKIT_DIR$\inc\cpp\exception</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\startupF411RE.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\stdexcept</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\xctype.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\iarproject.out</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\StackMacros.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
             <file>$PROJ_DIR$\AHardware\IDisplayDriver.hpp</file>
             <file>$PROJ_DIR$\AHardware\IGpio.hpp</file>
             <file>$PROJ_DIR$\AHardware\Pinsconfig.hpp</file>
@@ -193,11 +200,15 @@
             <file>$PROJ_DIR$\Application\IUnits.hpp</file>
             <file>$PROJ_DIR$\Application\Kelvin.hpp</file>
             <file>$PROJ_DIR$\Application\Measuring.hpp</file>
-            <file>$PROJ_DIR$\AHardware\TemperatureSensor.hpp</file>
+            <file>$PROJ_DIR$\Application\TemperatureSensor.hpp</file>
+            <file>$PROJ_DIR$\Application\TemperatureTask.hpp</file>
             <file>$PROJ_DIR$\Application\Temperautre.hpp</file>
             <file>$PROJ_DIR$\Application\ButtonTask.cpp</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\Common\mpu_wrappers.c</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\port.c</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portasm.c</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\portable\IAR\ARM_CM4F\portasm.s</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\portable\MemMang\heap_1.c</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\croutine.c</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\event_groups.c</file>
             <file>$PROJ_DIR$\Rtos\FreeRtos\list.c</file>
@@ -206,42 +217,38 @@
             <file>$PROJ_DIR$\Rtos\FreeRtos\timers.c</file>
             <file>$PROJ_DIR$\main.cpp</file>
             <file>$PROJ_DIR$\startupF411RE.cpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\startupF411RE.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\stdexcept</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\xctype.h</file>
-            <file>$PROJ_DIR$\Debug\Exe\iarproject.out</file>
-            <file>$PROJ_DIR$\Rtos\FreeRtos\include\StackMacros.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\limits.h</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xstring</file>
-            <file>$PROJ_DIR$\Rtos\wrapper\event.hpp</file>
-            <file>$PROJ_DIR$\Debug\List\croutine.s</file>
-            <file>$TOOLKIT_DIR$\inc\c\wctype.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\Debug\List\port.lst</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\chrono</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\ios</file>
+            <file>$PROJ_DIR$\AHardware\SMBus.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\SMBus.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\SMBus.o</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cctype</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cstddef</file>
+            <file>$PROJ_DIR$\Debug\List\ButtonTask.lst</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$PROJ_DIR$\Rtos\FreeRtos\include\croutine.h</file>
+            <file>$PROJ_DIR$\Debug\List\timers.s</file>
+            <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xmemory0</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cstdio</file>
+            <file>$PROJ_DIR$\Debug\Obj\port.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\List\main.s</file>
+            <file>$PROJ_DIR$\..\..\..\..\Kolody\Курсовой ПОИП Кощеева Русанова\курсач Последняя версия\Application\Filter\Filter.hpp</file>
+            <file>$PROJ_DIR$\Application\TempTask.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\iostream</file>
+            <file>$PROJ_DIR$\..\..\..\..\Kolody\Infrared-Temperature-Sensor\Src\stm32f1xx_it.c</file>
+            <file>$PROJ_DIR$\AHardware\TempSensor.hpp</file>
+            <file>$PROJ_DIR$\AHardware\TempSensor.cpp</file>
+            <file>$PROJ_DIR$\Application\TemperatureDirector.hpp</file>
+            <file>$PROJ_DIR$\..\..\..\..\Kolody\Infrared-Temperature-Sensor\Src\stm32f1xx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Kolody\Курсовой ПОИП Кощеева Русанова\курсач Последняя версия\MyTasks\HumidityTask.hpp</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 206 71 16</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\AHardware\SMBus.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 30</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 29</file>
+                    <file> 178 54 168</file>
                 </tool>
             </outputs>
         </file>
@@ -250,34 +257,66 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 166</file>
+                    <file> 149</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 168</file>
+                    <file> 151</file>
                 </tool>
             </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MyTask\TemperatureTask.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15 14 11</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 16</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 12</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\iarproject.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 54 168</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 69 149 139 169 67 104 118 97 103 53 23 78 52 165 45 57 159</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Application\ButtonTask.cpp</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 169 33 166</file>
+                    <file> 152 217 149</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 167</file>
+                    <file> 150</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 168</file>
+                    <file> 151</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 181 155 137 172 55 38 118 213 42 68 85 145 59 124 204 60 136 80 21 45 110 208 130 46 76 14 65 125 151 113 32 10 22 164 173 119 97 15 161 11 39 47 24 162 140 75 9 53 77 216 99 89 44 6 54 148 205 43 138 212 203 209 147 154 31 158 92 79 116 160 58 132 72 127 157 131 104 23 159 78 34 41 37 98 96 149 143 163 12 101 48 215 52 171 26 210 2 175 61 152 51 83 5 50 87 20 88 170 105 91 180 176</file>
+                    <file> 188 138 120 155 38 222 101 7 226 51 68 128 42 107 176 43 119 63 19 28 93 180 113 29 59 166 48 108 134 96 216 162 20 147 172 102 80 167 144 163 223 30 22 145 123 58 161 36 60 10 82 72 27 158 37 131 177 26 121 6 175 3 130 137 215 141 75 62 99 143 41 115 55 110 140 114 87 21 142 61 218 225 221 81 79 132 126 146 164 84 31 9 35 154 24 4 2 182 44 135 34 66 157 33 70 18 71 153 88 74 187 183</file>
                 </tool>
             </inputs>
         </file>
@@ -286,21 +325,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 81 214 135</file>
+                    <file> 64 8 118</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 40</file>
+                    <file> 224</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 106</file>
+                    <file> 89</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 34 41 68 85 145 59 37 157 10 42 60 213 131 104 23 159 78 98 96 149</file>
+                    <file> 218 225 51 68 128 42 221 140 162 226 43 7 114 87 21 142 61 81 79 132</file>
                 </tool>
             </inputs>
         </file>
@@ -309,13 +348,13 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 114</file>
+                    <file> 97</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 131</file>
+                    <file> 114</file>
                 </tool>
             </inputs>
         </file>
@@ -324,21 +363,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 211 146 156</file>
+                    <file> 5 129 139</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 64</file>
+                    <file> 47</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 141</file>
+                    <file> 124</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 157 10 42 68 85 145 59 60 213 131 104 23 159 78 34 41 37 98 96 149 35</file>
+                    <file> 140 162 226 51 68 128 42 43 7 114 87 21 142 61 218 225 221 81 79 132 219</file>
                 </tool>
             </inputs>
         </file>
@@ -347,11 +386,149 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 4 134 17</file>
+                    <file> 156 117 169</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 102</file>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 226 51 68 128 42 43 119 140 162 7 114 87 21 142 61 218 225 221 81 79 132 164 84</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Rtos\FreeRtos\list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 49 148 67</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 226 51 68 128 42 43 119 140 162 7 114 87 21 142 61 218 225 221 81 132</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Rtos\FreeRtos\queue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90 136 103</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 226 51 68 128 42 43 119 145 123 140 162 7 114 87 21 142 61 218 225 221 81 79 132 146</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Rtos\FreeRtos\tasks.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112 76 23</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 83</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 226 51 68 128 42 43 119 145 123 140 162 7 114 87 21 142 61 218 225 221 81 79 132 164 179</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Rtos\FreeRtos\timers.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 220 46 78</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 17</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176 226 51 68 128 42 43 119 140 162 7 114 87 21 142 61 218 225 221 81 79 132 146 164</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 227 105 104</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 125</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 173</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 100 138 120 155 38 222 101 7 226 51 68 128 42 107 176 43 119 63 19 28 93 180 113 29 59 166 48 108 134 96 216 162 20 147 172 102 80 167 144 163 223 30 22 145 123 58 161 36 60 10 82 72 27 158 37 131 177 26 121 6 175 3 130 137 215 141 75 62 99 143 41 115 55 110 140 114 87 21 142 61 218 225 221 81 79 132 126 146 164 84 31 9 35 154 24 4 73 91 34 66 157 33 70 18 71 153 88 74 2 182 187 188 44 135 183 25 95 116 109 39 40 185 0 1 181 77 106 186 56 122 184 195 191 230</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startupF411RE.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127 98 53</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 174</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -361,162 +538,22 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 204 42 68 85 145 59 60 136 157 10 213 131 104 23 159 78 34 41 37 98 96 149 12 101</file>
+                    <file> 100 138 120 155 38 222 101 7 226 51 68 128 42 107 176 43 119 63 19 28 93 180 113 29 59 166 48 108 134 96 216 162 20 147 172 102 80 167 144 163 223 30 22 145 123 58 161 36 60 10 82 72 27 158 37 131 177 26 121 6 175 3 130 137 215 141 75 62 99 143 41 115 55 110 140 114 87 21 142 61 218 225 221 81 79 132 126 146 164 84 31 9 35 154 24</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Rtos\FreeRtos\list.c</name>
+            <name>$PROJ_DIR$\AHardware\SMBus.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 66 165 84</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 109</file>
+                    <file> 214</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 3</file>
+                    <file> 213</file>
                 </tool>
             </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 204 42 68 85 145 59 60 136 157 10 213 131 104 23 159 78 34 41 37 98 149</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Rtos\FreeRtos\queue.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 107 153 120</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 67</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 82</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 204 42 68 85 145 59 60 136 162 140 157 10 213 131 104 23 159 78 34 41 37 98 96 149 163</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Rtos\FreeRtos\tasks.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 129 93 25</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 100</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 150</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 204 42 68 85 145 59 60 136 162 140 157 10 213 131 104 23 159 78 34 41 37 98 96 149 12 207</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Rtos\FreeRtos\timers.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 36 63 95</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 49</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 18</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 204 42 68 85 145 59 60 136 157 10 213 131 104 23 159 78 34 41 37 98 96 149 163 12</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\main.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 19 122 121</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 142</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 201</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 117 155 137 172 55 38 118 213 42 68 85 145 59 124 204 60 136 80 21 45 110 208 130 46 76 14 65 125 151 113 32 10 22 164 173 119 97 15 161 11 39 47 24 162 140 75 9 53 77 216 99 89 44 6 54 148 205 43 138 212 203 209 147 154 31 158 92 79 116 160 58 132 72 127 157 131 104 23 159 78 34 41 37 98 96 149 143 163 12 101 48 215 52 171 26 210 90 108 51 83 5 50 87 20 88 170 105 91 2 175 180 181 61 152 176 27 112 133 126 56 57 178 0 1 174 94 123 179 73 139 177</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startupF411RE.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 144 115 70</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 202</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 128</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 117 155 137 172 55 38 118 213 42 68 85 145 59 124 204 60 136 80 21 45 110 208 130 46 76 14 65 125 151 113 32 10 22 164 173 119 97 15 161 11 39 47 24 162 140 75 9 53 77 216 99 89 44 6 54 148 205 43 138 212 203 209 147 154 31 158 92 79 116 160 58 132 72 127 157 131 104 23 159 78 34 41 37 98 96 149 143 163 12 101 48 215 52 171 26</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\iarproject.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 71 16</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 86 166 156 17 84 121 135 114 120 70 25 95 69 13 62 74 7</file>
-                </tool>
-            </inputs>
         </file>
         <forcedrebuild>
             <name>$PROJ_DIR$\Rtos\FreeRtos\portable\Common\mpu_wrappers.c</name>
